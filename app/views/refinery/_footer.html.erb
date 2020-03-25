@@ -1,0 +1,3 @@
+<div>
+  <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).tap {|p| p.dom_id = 'nav'}.to_html %>
+</div>
