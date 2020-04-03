@@ -13,6 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery3
+//= require jquery.dropotron.min
+//= require jquery.onvisible.min
+//= require skel.min
+//= require util
+//= require main
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
