@@ -1,0 +1,84 @@
+<%= form_for [refinery, :employees_admin, @employee] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+             :object => @employee,
+             :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :first_name -%>
+    <%= f.text_field :first_name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :last_name -%>
+    <%= f.text_field :last_name -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :patronymic -%>
+    <%= f.text_field :patronymic -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :type -%>
+    <%= f.number_field :type, :collection => Refinery::Employees::Employee.types -%>
+    <%#= f.input :type, collection: Refinery::Employees::Employee.types, label: 'Type', prompt: false %>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :position -%>
+    <%= f.number_field :position -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :type_education -%>
+    <%= f.number_field :type_education -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :education -%>
+    <%= f.text_field :education -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :phone -%>
+    <%= f.text_field :phone -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :bdate -%>
+    <%= f.date_select :bdate -%>
+  </div>
+
+
+  <div class='field'>
+    <%= f.label :photo -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :photo_id,
+               :image => @employee.photo,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+               :f => f,
+               :fields => [:description],
+               :object => "employees/employee" -%>
+  </div>
+
+
+  <%= render '/refinery/admin/form_actions', f: f,
+             continue_editing: false,
+             delete_title: t('delete', scope: 'refinery.employees.admin.employees.employee'),
+             delete_confirmation: t('message', scope: 'refinery.admin.delete', title: @employee.first_name),
+             cancel_url: refinery.employees_admin_employees_path -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+      $(document).ready(function () {
+          page_options.init(false, '', '');
+      });
+  </script>
+<% end -%>
