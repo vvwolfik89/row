@@ -71,4 +71,3 @@ gem 'refinerycms-i18n'
 #  gem 'refinerycms-page-images', ['~> 4.0', '>= 4.0.0']
 
 gem 'refinerycms-items', path: 'vendor/extensions'
-gem 'refinerycms-employees', path: 'vendor/extensions'

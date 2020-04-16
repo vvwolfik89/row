@@ -8,6 +8,3 @@
 
 # Added by Refinery CMS Items extension
 Refinery::Items::Engine.load_seed
-
-# Added by Refinery CMS Employees extension
-Refinery::Employees::Engine.load_seed
