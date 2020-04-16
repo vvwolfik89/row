@@ -3,11 +3,12 @@ module Refinery
     class Employee < Refinery::Core::BaseModel
       self.table_name = 'refinery_employees'
 
-      enum employee_type: %i(нead deputy_head management_staff head_of_oepartment employee)
-      enum type_education: %i(higher_education secondary_vocational secondary)
+      enum type: %i(oldest_sort latest_sort random_sort)
+      # enum type_education: %i(oldest_sort latest_sort random_sort)
+      # enum position: %i(oldest_sort latest_sort random_sort)
 
 
-      validates :first_name, :presence => true
+      validates :first_name, :presence => true, :uniqueness => true
 
       belongs_to :photo, :class_name => '::Refinery::Image'
 
