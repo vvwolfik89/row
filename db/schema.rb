@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200414082712) do
+ActiveRecord::Schema.define(version: 20200416080038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,16 +58,18 @@ ActiveRecord::Schema.define(version: 20200414082712) do
     t.string "first_name"
     t.string "last_name"
     t.string "patronymic"
-    t.integer "type"
+    t.integer "employee_type"
     t.integer "type_education"
     t.string "education"
     t.string "phone"
     t.date "bdate"
     t.integer "photo_id"
     t.text "description"
-    t.integer "position"
+    t.string "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "beginning_work"
+    t.boolean "is_active", default: true
   end
 
   create_table "refinery_image_translations", force: :cascade do |t|
