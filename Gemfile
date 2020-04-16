@@ -23,6 +23,8 @@ gem 'bootstrap', '~> 4.0.0'
 
 gem 'jquery-rails'
 
+gem 'simple_form'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -69,3 +71,5 @@ gem 'refinerycms-i18n'
 #  gem 'refinerycms-inquiries', ['~> 4.0', '>= 4.0.0']
 #  gem 'refinerycms-search', ['~> 4.0', '>= 4.0.0']
 #  gem 'refinerycms-page-images', ['~> 4.0', '>= 4.0.0']
+
+gem 'refinerycms-employees', path: 'vendor/extensions'
