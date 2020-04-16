@@ -24,9 +24,9 @@ ru:
   activerecord:
     attributes:
       'refinery/employees/employee':
-        first_name: First Name
-        last_name: Last Name
-        patronymic: Patronymic
+        first_name: Имя
+        last_name: Фамилия
+        patronymic: Отчество
         type: Type
         type_education: Type Education
         education: Education

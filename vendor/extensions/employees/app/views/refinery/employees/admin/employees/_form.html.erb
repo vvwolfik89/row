@@ -1,55 +1,18 @@
-<%= form_for [refinery, :employees_admin, @employee] do |f| -%>
+<%= simple_form_for [refinery, :employees_admin, @employee] do |f| -%>
   <%= render '/refinery/admin/error_messages',
              :object => @employee,
              :include_object_name => true %>
-
-  <div class='field'>
-    <%= f.label :first_name -%>
-    <%= f.text_field :first_name, :class => 'larger widest' -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :last_name -%>
-    <%= f.text_field :last_name -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :patronymic -%>
-    <%= f.text_field :patronymic -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :type -%>
-    <%= f.number_field :type, :collection => Refinery::Employees::Employee.types -%>
-    <%#= f.input :type, collection: Refinery::Employees::Employee.types, label: 'Type', prompt: false %>
-
-  </div>
-
-  <div class='field'>
-    <%= f.label :position -%>
-    <%= f.number_field :position -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :type_education -%>
-    <%= f.number_field :type_education -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :education -%>
-    <%= f.text_field :education -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :phone -%>
-    <%= f.text_field :phone -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :bdate -%>
-    <%= f.date_select :bdate -%>
-  </div>
-
+  <%= f.input :is_active %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :patronymic %>
+  <%= f.input :bdate, as: :date %>
+  <%= f.input :position %>
+  <%= f.input :beginning_work, as: :date %>
+  <%= f.input :employee_type, collection: Refinery::Employees::Employee.employee_types.map {|key, _| [t("employee_type.#{key}"), key]}, label: 'EmpType', prompt: false %>
+  <%= f.input :type_education, collection: Refinery::Employees::Employee.type_educations.map {|key, _| [key.humanize, key]}, label: 'Type', prompt: false %>
+  <%= f.input :education %>
+  <%= f.input :phone %>
 
   <div class='field'>
     <%= f.label :photo -%>
