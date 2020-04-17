@@ -1,0 +1,38 @@
+ru:
+  refinery:
+    plugins:
+      items:
+        title: Items
+    items:
+      admin:
+        items:
+          actions:
+            create_new: Добавить Item
+            reorder: Изменить порядок Items
+            reorder_done: Закончить изменять порядок Items
+          records:
+            title: Items
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Items" не найдено. Нажмите "Добавить Item" чтобы создать item.
+          item:
+            view_live_html: Просмотреть item вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать item
+            delete: Удалить item навсегда
+      items:
+        show:
+          other: Другие Items
+  activerecord:
+    attributes:
+      'refinery/items/item':
+        title: Title
+        date_start: Date Start
+        date_end: Date End
+        icon: Icon
+        content: Content
+        description: Description
+        position: Position
+        type_news: Type News
+  type_news:
+    birth_days: Дни Рождения
+    world_news: Мировые Новости
+    chanel_news: Новости Центра
