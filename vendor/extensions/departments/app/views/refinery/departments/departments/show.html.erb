@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @department.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%= raw @department.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Icon</h1>
+    <p>
+      <%= image_fu @department.icon, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%= raw @department.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Is Active</h1>
+    <p>
+      <%= raw @department.is_active %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="departments">
+      <% @departments.each do |department| %>
+        <li>
+          <%= link_to department.title, refinery.departments_department_path(department) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

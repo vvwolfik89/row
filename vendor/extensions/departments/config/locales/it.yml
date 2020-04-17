@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      departments:
+        title: Departments
+    departments:
+      admin:
+        departments:
+          actions:
+            create_new: Aggiungi Nuovo Department
+            reorder: Riordina Departments
+            reorder_done: Termina il Riordino di Departments
+          records:
+            title: Departments
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Departments. Clicca "Aggiungi Nuovo Department" per aggiungere il tuo primo department.
+          department:
+            view_live_html: Guarda live questo department <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo department
+            delete: Rimuovi per sempre questo department
+      departments:
+        show:
+          other: Altri Departments
+  activerecord:
+    attributes:
+      'refinery/departments/department':
+        title: Title
+        icon: Icon
+        description: Description
+        is_active: Is Active

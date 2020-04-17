@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      departments:
+        title: Departments
+    departments:
+      admin:
+        departments:
+          actions:
+            create_new: Nieuwe Department toevoegen
+            reorder: De volgorde van de Departments wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Department-volgorde
+          records:
+            title: Departments
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Departments. Druk op 'Nieuwe Department toevoegen' om de eerste toe te voegen.
+          department:
+            view_live_html: Deze department op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze department
+            delete: Deze department definitief verwijderen
+      departments:
+        show:
+          other: Andere Departments
+  activerecord:
+    attributes:
+      'refinery/departments/department':
+        title: Title
+        icon: Icon
+        description: Description
+        is_active: Is Active

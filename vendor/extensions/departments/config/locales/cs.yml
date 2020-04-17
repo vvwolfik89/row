@@ -1,0 +1,30 @@
+cs:
+  refinery:
+    plugins:
+      departments:
+        title: Departments
+    departments:
+      admin:
+        departments:
+          actions:
+            create_new: Přidat Department
+            reorder: Řadit Departments
+            reorder_done: Konec řazení Departments
+          records:
+            title: Departments
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Departments. Zvolte "Přidat Department" pro přidání prvního department.
+          department:
+            view_live_html: Zobrazit náhled department<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit department
+            delete: Smazat department
+      departments:
+        show:
+          other: Další Departments
+  activerecord:
+    attributes:
+      'refinery/departments/department':
+        title: Title
+        icon: Icon
+        description: Description
+        is_active: Is Active

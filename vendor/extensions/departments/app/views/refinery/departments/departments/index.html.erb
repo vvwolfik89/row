@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="departments">
+    <% @departments.each do |department| %>
+      <li>
+        <%= link_to department.title, refinery.departments_department_path(department) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

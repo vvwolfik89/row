@@ -74,3 +74,4 @@ gem 'refinerycms-i18n'
 
 gem 'refinerycms-employees', path: 'vendor/extensions'
 gem 'refinerycms-items', path: 'vendor/extensions'
+gem 'refinerycms-departments', path: 'vendor/extensions'

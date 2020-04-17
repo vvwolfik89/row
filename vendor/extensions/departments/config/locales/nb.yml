@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      departments:
+        title: Departments
+    departments:
+      admin:
+        departments:
+          actions:
+            create_new: Lag en ny Department
+            reorder: Endre rekkefølgen på Departments
+            reorder_done: Ferdig å endre rekkefølgen Departments
+          records:
+            title: Departments
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Departments enda. Klikk på "Lag en ny Department" for å legge til din første department.
+          department:
+            view_live_html: Vis hvordan denne department ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne department
+            delete: Fjern denne department permanent
+      departments:
+        show:
+          other: Andre Departments
+  activerecord:
+    attributes:
+      'refinery/departments/department':
+        title: Title
+        icon: Icon
+        description: Description
+        is_active: Is Active
