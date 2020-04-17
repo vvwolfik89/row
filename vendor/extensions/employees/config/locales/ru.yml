@@ -2,38 +2,48 @@ ru:
   refinery:
     plugins:
       employees:
-        title: Employees
+        title: Сотрудники
     employees:
       admin:
         employees:
           actions:
-            create_new: Добавить Employee
-            reorder: Изменить порядок Employees
-            reorder_done: Закончить изменять порядок Employees
+            create_new: Добавить Сотрудника
+            reorder: Изменить порядок Сотрудников
+            reorder_done: Закончить изменять порядок Сотрудников
           records:
-            title: Employees
+            title: Сотрудники
             sorry_no_results: "Извините, поиск не дал результатов."
-            no_items_yet: Записей "Employees" не найдено. Нажмите "Добавить Employee" чтобы создать employee.
+            no_items_yet: Записей "Сотрудников" не найдено. Нажмите "Добавить Сотрудника" чтобы создать сотрудника.
           employee:
-            view_live_html: Просмотреть employee вживую <br/><em>(в новом окне)</em>
-            edit: Редактировать employee
-            delete: Удалить employee навсегда
+            view_live_html: Просмотреть сотрудника вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать сотрудника
+            delete: Удалить сотрудника навсегда
       employees:
         show:
-          other: Другие Employees
+          other: Другие Сотрудники
   activerecord:
     attributes:
       'refinery/employees/employee':
-        first_name: First Name
-        last_name: Last Name
-        patronymic: Patronymic
-        employee_type: Employee Type
-        type_education: Type Education
-        education: Education
-        phone: Phone
-        bdate: Bdate
-        description: Description
-        position: Position
-        beginning_work_at: Beginning Work At
-        icon: Icon
+        first_name: Имя
+        last_name: Фамилия
+        patronymic: Отчество
+        employee_type: Тип
+        type_education: Образование
+        education: Школа/Среднее специальное заведение/ Университет
+        phone: Телефон
+        bdate: День Рождения
+        description: Описание
+        position: Должность
+        beginning_work_at: Работает в организации с
+        icon: Фото
         is_active: Is Active
+  employee_types:
+    head: Директор
+    deputy_head: Заместитель директора
+    management_staff: Управленческий персонал
+    head_of_department: Начальник отдела
+    employee: Сотрудник
+  type_educations:
+    secondary_education: Среднее образование
+    secondary_special_education: Среднее специальное образование
+    higher_education: Высшее образование

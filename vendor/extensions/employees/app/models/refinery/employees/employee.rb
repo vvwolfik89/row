@@ -6,8 +6,8 @@ module Refinery
 
       translates :first_name, :last_name, :patronymic, :education, :description, :position
 
-      enum type_education: %i(head deputy_head management_staff head_of_department employee)
-      enum employee_type: %i(secondary_education secondary_special_education higher_education)
+      enum employee_type: %i(head deputy_head management_staff head_of_department employee)
+      enum type_education: %i(secondary_education secondary_special_education higher_education)
 
       validates :first_name, :presence => true, :uniqueness => true
 

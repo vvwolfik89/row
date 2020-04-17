@@ -10,12 +10,12 @@
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :patronymic %>
-  <%= f.input :employee_type, collection: Refinery::Employees::Employee.employee_types %>
+  <%= f.input :employee_type, collection: Refinery::Employees::Employee.employee_types.map {|key, _| [t("employee_types.#{key}"), key]} %>
   <div class='field'>
     <%= f.label :beginning_work_at -%>
     <%= f.date_select :beginning_work_at -%>
   </div>
-  <%= f.input :type_education, collection: Refinery::Employees::Employee.type_educations %>
+  <%= f.input :type_education, collection: Refinery::Employees::Employee.type_educations.map {|key, _| [t("type_educations.#{key}"), key]} %>
   <%= f.input :education %>
   <%= f.input :phone %>
   <%= f.input :position %>

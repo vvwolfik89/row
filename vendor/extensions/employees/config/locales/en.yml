@@ -37,3 +37,13 @@ en:
         beginning_work_at: Beginning Work At
         icon: Icon
         is_active: Is Active
+  employee_types:
+    head: Head
+    deputy_head: Deputy Head
+    management_staff: Management Staff
+    head_of_department: Head of Department
+    employee: Employee
+  type_educations:
+    secondary_education: Secondary Education
+    secondary_special_education: Secondary Special Education
+    higher_education: Higher Education
