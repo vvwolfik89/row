@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200417091828) do
+ActiveRecord::Schema.define(version: 20200417192741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,27 @@ ActiveRecord::Schema.define(version: 20200417091828) do
     t.string "full_name"
     t.index ["id"], name: "index_refinery_authentication_devise_users_on_id"
     t.index ["slug"], name: "index_refinery_authentication_devise_users_on_slug"
+  end
+
+  create_table "refinery_department_translations", force: :cascade do |t|
+    t.integer "refinery_department_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.index ["locale"], name: "index_refinery_department_translations_on_locale"
+    t.index ["refinery_department_id"], name: "index_e7a1df3e8d677cdefff35054cdb105feb591303d"
+  end
+
+  create_table "refinery_departments", force: :cascade do |t|
+    t.string "title"
+    t.integer "icon_id"
+    t.text "description"
+    t.boolean "is_active"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_employee_translations", force: :cascade do |t|

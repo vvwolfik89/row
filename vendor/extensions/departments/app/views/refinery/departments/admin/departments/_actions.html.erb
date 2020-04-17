@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Departments::Admin::DepartmentsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.departments_admin_departments_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_departments_admin_department_path, t('.create_new') %>
+  </li>
+  <% if !searching? && ::Refinery::Departments::Admin::DepartmentsController.sortable? && ::Refinery::Departments::Department.many? %>
+    <li>
+      <%= action_label :reorder,
+                       refinery.departments_admin_departments_path,
+                       t('.reorder', what: "Departments"), id: 'reorder_action' %>
+      <%= action_label :reorder_done,
+                       refinery.departments_admin_departments_path,
+                       t('.reorder_done', what: "Departments"), id: 'reorder_action_done', class: 'hidden' %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      departments:
+        title: Departments
+    #        article: masculino/femenino
+    departments:
+      admin:
+        departments:
+          actions:
+            create_new: Crear nuevo department
+            reorder: Reordenar departments
+            reorder_done: Reordenación de departments completada
+          records:
+            title: Departments
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay departments todavía. Pulsa en "Crear nuevo Department" para crear tu primer department.
+          department:
+            view_live_html: Ver este department como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este department
+            delete: Borrar este department para siempre
+      departments:
+        show:
+          other: Otros departments
+  activerecord:
+    attributes:
+      'refinery/departments/department':
+        title: Title
+        icon: Icon
+        description: Description
+        is_active: Is Active

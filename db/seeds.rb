@@ -11,3 +11,6 @@ Refinery::Employees::Engine.load_seed
 
 # Added by Refinery CMS Items extension
 Refinery::Items::Engine.load_seed
+
+# Added by Refinery CMS Departments extension
+Refinery::Departments::Engine.load_seed

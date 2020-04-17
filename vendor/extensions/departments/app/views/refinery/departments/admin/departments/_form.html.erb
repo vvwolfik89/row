@@ -1,0 +1,40 @@
+<%= form_for [refinery, :departments_admin, @department] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+             :object => @department,
+             :include_object_name => true %>
+
+  <%= render '/refinery/admin/locale_picker',
+             :current_locale => Globalize.locale %>
+
+  <div class='field'>
+    <%= f.label :is_active -%>
+    <%= f.check_box :is_active, :checked => @department[:is_active] -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+               :f => f,
+               :fields => [:description],
+               :object => "departments/department" -%>
+  </div>
+
+
+  <%= render '/refinery/admin/form_actions', f: f,
+             continue_editing: false,
+             delete_title: t('delete', scope: 'refinery.departments.admin.departments.department'),
+             delete_confirmation: t('message', scope: 'refinery.admin.delete', title: @department.title),
+             cancel_url: refinery.departments_admin_departments_path -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+      $(document).ready(function () {
+          page_options.init(false, '', '');
+      });
+  </script>
+<% end -%>
