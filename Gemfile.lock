@@ -4,6 +4,9 @@ PATH
     refinerycms-employees (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
+    refinerycms-items (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -371,6 +374,7 @@ DEPENDENCIES
   refinerycms-authentication-devise (~> 2.0)
   refinerycms-employees!
   refinerycms-i18n
+  refinerycms-items!
   refinerycms-wymeditor (~> 2.0, >= 2.0.0)
   sass-rails (~> 5.0)
   selenium-webdriver
