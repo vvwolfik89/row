@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200322205951) do
+ActiveRecord::Schema.define(version: 20200416105748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,39 @@ ActiveRecord::Schema.define(version: 20200322205951) do
     t.string "full_name"
     t.index ["id"], name: "index_refinery_authentication_devise_users_on_id"
     t.index ["slug"], name: "index_refinery_authentication_devise_users_on_slug"
+  end
+
+  create_table "refinery_employee_translations", force: :cascade do |t|
+    t.integer "refinery_employee_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "patronymic"
+    t.string "education"
+    t.text "description"
+    t.string "position"
+    t.index ["locale"], name: "index_refinery_employee_translations_on_locale"
+    t.index ["refinery_employee_id"], name: "index_refinery_employee_translations_on_refinery_employee_id"
+  end
+
+  create_table "refinery_employees", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "patronymic"
+    t.integer "employee_type"
+    t.integer "type_education"
+    t.string "education"
+    t.string "phone"
+    t.date "bdate"
+    t.text "description"
+    t.integer "position"
+    t.date "beginning_work_at"
+    t.integer "icon_id"
+    t.boolean "is_active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_image_translations", force: :cascade do |t|

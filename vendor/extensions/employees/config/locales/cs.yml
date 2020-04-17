@@ -1,0 +1,39 @@
+cs:
+  refinery:
+    plugins:
+      employees:
+        title: Employees
+    employees:
+      admin:
+        employees:
+          actions:
+            create_new: Přidat Employee
+            reorder: Řadit Employees
+            reorder_done: Konec řazení Employees
+          records:
+            title: Employees
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Employees. Zvolte "Přidat Employee" pro přidání prvního employee.
+          employee:
+            view_live_html: Zobrazit náhled employee<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit employee
+            delete: Smazat employee
+      employees:
+        show:
+          other: Další Employees
+  activerecord:
+    attributes:
+      'refinery/employees/employee':
+        first_name: First Name
+        last_name: Last Name
+        patronymic: Patronymic
+        employee_type: Employee Type
+        type_education: Type Education
+        education: Education
+        phone: Phone
+        bdate: Bdate
+        description: Description
+        position: Position
+        beginning_work_at: Beginning Work At
+        icon: Icon
+        is_active: Is Active

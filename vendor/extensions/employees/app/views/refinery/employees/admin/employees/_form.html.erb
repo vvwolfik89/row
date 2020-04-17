@@ -1,0 +1,57 @@
+<%= simple_form_for [refinery, :employees_admin, @employee] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+             :object => @employee,
+             :include_object_name => true %>
+
+  <%= render '/refinery/admin/locale_picker',
+             :current_locale => Globalize.locale %>
+
+  <%= f.input :is_active %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :patronymic %>
+  <%= f.input :employee_type, collection: Refinery::Employees::Employee.employee_types.map {|key, _| [t("employee_types.#{key}"), key]} %>
+  <div class='field'>
+    <%= f.label :beginning_work_at -%>
+    <%= f.date_select :beginning_work_at -%>
+  </div>
+  <%= f.input :type_education, collection: Refinery::Employees::Employee.type_educations.map {|key, _| [t("type_educations.#{key}"), key]} %>
+  <%= f.input :education %>
+  <%= f.input :phone %>
+  <%= f.input :position %>
+
+  <div class='field'>
+    <%= f.label :bdate -%>
+    <%= f.date_select :bdate -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+               :f => f,
+               :fields => [:description],
+               :object => "employees/employee" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :icon -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :icon_id,
+               :image => @employee.icon,
+               :toggle_image_display => false -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', f: f,
+             continue_editing: false,
+             delete_title: t('delete', scope: 'refinery.employees.admin.employees.employee'),
+             delete_confirmation: t('message', scope: 'refinery.admin.delete', title: @employee.first_name),
+             cancel_url: refinery.employees_admin_employees_path -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+      $(document).ready(function () {
+          page_options.init(false, '', '');
+      });
+  </script>
+<% end -%>

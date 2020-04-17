@@ -1,0 +1,31 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(employee) -%>">
+  <span class='title'>
+    <%= translated_field(employee, :first_name) %>
+  </span>
+
+  <% if Refinery::I18n.frontend_locales.many? %>
+    <span class='locales'>
+      <% employee.translations.sort_by {|t| Refinery::I18n.frontend_locales.index(t.locale)}.each do |translation| %>
+        <% if translation.first_name.present? %>
+          <%= link_to refinery.edit_employees_admin_employee_path(employee, :switch_locale => translation.locale),
+                      class: 'locale', title: translation.locale.upcase do %>
+
+            <div class="<%= translation.locale %> locale_marker">
+              <%= locale_text_icon(translation.locale.upcase) %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </span>
+  <% end %>
+
+  <span class='preview'></span>
+
+  <span class='actions'>
+    <%= action_icon(:preview, refinery.employees_employee_path(employee), t('.view_live_html')) %>
+    <%= action_icon(:edit, refinery.edit_employees_admin_employee_path(employee), t('.edit')) %>
+    <%= action_icon(:delete, refinery.employees_admin_employee_path(employee), t('.delete'),
+                    {class: "cancel confirm-delete",
+                     data: {confirm: t('message', scope: 'refinery.admin.delete', title: employee.first_name)}}) %>
+  </span>
+</li>
