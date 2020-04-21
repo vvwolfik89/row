@@ -1,4 +1,4 @@
-<%= simple_form_for [refinery, :employees_admin, @employee] do |f| -%>
+<%= custom_form_for([refinery, :employees_admin, @employee], bootstrap3_form_options) do |f| -%>
   <%= render '/refinery/admin/error_messages',
              :object => @employee,
              :include_object_name => true %>
@@ -19,6 +19,7 @@
   <%= f.input :education %>
   <%= f.input :phone %>
   <%= f.input :position %>
+  <%= f.association :refinery_departments, collection: Refinery::Departments::Department.active.map {|key, _| [key.title, key.id]}, label: 'Department' %>
 
   <div class='field'>
     <%= f.label :bdate -%>

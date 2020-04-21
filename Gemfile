@@ -19,11 +19,19 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+
+# UI Gems
 gem 'bootstrap', '~> 4.0.0'
-
 gem 'jquery-rails'
-
+gem 'jquery-ui-rails'
+gem 'bootstrap-sass'
+gem 'bootstrap-datepicker-rails'
 gem 'simple_form'
+gem 'RedCloth'
+gem 'rack-cors', require: 'rack/cors'
+gem 'font-awesome-rails'
+gem 'active_link_to'
+gem 'render_async'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
