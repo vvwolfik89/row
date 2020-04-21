@@ -13,6 +13,8 @@ module Refinery
 
       belongs_to :icon, :class_name => '::Refinery::Image'
 
+      has_and_belongs_to_many :refinery_departments, class_name: '::Refinery::Departments::Department', join_table: 'refinery_departments_employees', foreign_key: "refinery_employee_id", association_foreign_key: 'refinery_department_id'
+
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #
       #   acts_as_indexed :fields => [:title]
