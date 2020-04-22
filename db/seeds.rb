@@ -17,3 +17,6 @@ Refinery::Departments::Engine.load_seed
 
 # Added by Refinery CMS Partners extension
 Refinery::Partners::Engine.load_seed
+
+# Added by Refinery CMS SportRowings extension
+Refinery::SportRowings::Engine.load_seed

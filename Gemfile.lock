@@ -13,6 +13,9 @@ PATH
     refinerycms-partners (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
+    refinerycms-sport_rowings (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -400,6 +403,7 @@ DEPENDENCIES
   refinerycms-i18n
   refinerycms-items!
   refinerycms-partners!
+  refinerycms-sport_rowings!
   refinerycms-wymeditor (~> 2.0, >= 2.0.0)
   render_async
   sass-rails (~> 5.0)

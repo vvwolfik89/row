@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200421102613) do
+ActiveRecord::Schema.define(version: 20200422102449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -260,6 +260,30 @@ ActiveRecord::Schema.define(version: 20200421102613) do
     t.string "file_ext"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "refinery_sport_rowing_translations", force: :cascade do |t|
+    t.integer "refinery_sport_rowing_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.index ["locale"], name: "index_refinery_sport_rowing_translations_on_locale"
+    t.index ["refinery_sport_rowing_id"], name: "index_0e144cf97034f160d1bfd3cb1d24334ab0a2fe69"
+  end
+
+  create_table "refinery_sport_rowings", force: :cascade do |t|
+    t.string "title"
+    t.integer "kind"
+    t.integer "icon_id"
+    t.text "description"
+    t.string "short_name"
+    t.integer "count_athletes"
+    t.boolean "is_active"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "seo_meta", id: :serial, force: :cascade do |t|

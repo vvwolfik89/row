@@ -1,0 +1,42 @@
+ru:
+  refinery:
+    plugins:
+      sport_rowings:
+        title: Типы и Классы Лодок
+    sport_rowings:
+      admin:
+        sport_rowings:
+          actions:
+            create_new: Добавить Лодку
+            reorder: Изменить порядок Лодок
+            reorder_done: Закончить изменять порядок Лодок
+          records:
+            title: Sport Rowings
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Лодок" не найдено. Нажмите "Добавить Лодку" чтобы создать Лодку.
+          sport_rowing:
+            view_live_html: Просмотреть лодку вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать Лодку
+            delete: Удалить Лодку навсегда
+      sport_rowings:
+        show:
+          other: Другие Лодки
+  activerecord:
+    attributes:
+      'refinery/sport_rowings/sport_rowing':
+        title: Наименование Лодки
+        kind: Тип
+        icon: Изображение
+        description: Описание
+        short_name: Короткое обозначение
+        count_athletes: Количество атлетов в лодке
+        is_active: Лодка Активна
+  kinds:
+    academic_rowing: Академическая Гребля
+    kayaking_canoeing: Гребля на байдарках и каноэ
+  short_name:
+    errors:
+      not_uniq: уже существует
+  count_athletes:
+    errors:
+      not_uniq: уже существует или недействильно

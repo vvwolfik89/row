@@ -1,0 +1,63 @@
+<% content_for :body_content_title do %>
+  <%= @sport_rowing.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%= raw @sport_rowing.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Kind</h1>
+    <p>
+      <%= raw @sport_rowing.kind %>
+    </p>
+  </section>
+  <section>
+    <h1>Icon</h1>
+    <p>
+      <%= image_fu @sport_rowing.icon, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%= raw @sport_rowing.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Short Name</h1>
+    <p>
+      <%= raw @sport_rowing.short_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Count Athletes</h1>
+    <p>
+      <%= raw @sport_rowing.count_athletes %>
+    </p>
+  </section>
+  <section>
+    <h1>Is Active</h1>
+    <p>
+      <%= raw @sport_rowing.is_active %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="sport_rowings">
+      <% @sport_rowings.each do |sport_rowing| %>
+        <li>
+          <%= link_to sport_rowing.title, refinery.sport_rowings_sport_rowing_path(sport_rowing) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
