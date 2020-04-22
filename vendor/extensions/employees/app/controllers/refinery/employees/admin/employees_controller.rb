@@ -3,6 +3,7 @@ module Refinery
     module Admin
       class EmployeesController < ::Refinery::AdminController
         helper ApplicationHelper
+        helper CollectionHelper
 
         crudify :'refinery/employees/employee',
                 :title_attribute => 'first_name'

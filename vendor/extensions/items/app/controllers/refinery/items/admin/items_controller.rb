@@ -2,6 +2,8 @@ module Refinery
   module Items
     module Admin
       class ItemsController < ::Refinery::AdminController
+        helper ApplicationHelper
+        helper CollectionHelper
 
         crudify :'refinery/items/item'
 

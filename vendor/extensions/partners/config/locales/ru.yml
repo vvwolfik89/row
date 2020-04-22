@@ -1,0 +1,35 @@
+ru:
+  refinery:
+    plugins:
+      partners:
+        title: Партнеры
+    partners:
+      admin:
+        partners:
+          actions:
+            create_new: Добавить Партнера
+            reorder: Изменить порядок Партнеры
+            reorder_done: Закончить изменять порядок Партнеров
+          records:
+            title: Партнеры
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Партнеров" не найдено. Нажмите "Добавить Партнера" чтобы создать Партнера.
+          partner:
+            view_live_html: Просмотреть Партнера вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать Партнера
+            delete: Удалить Партнера навсегда
+      partners:
+        show:
+          other: Другие Партнеры
+  activerecord:
+    attributes:
+      'refinery/partners/partner':
+        title: Наименование
+        icon: Icon
+        description: Описание
+        is_active: Активный
+        url_address: Url Address
+        position: Тип
+  position:
+    sport_organization: Спортивные организации
+    business_entity: Коммерческие организации

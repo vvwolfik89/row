@@ -14,3 +14,6 @@ Refinery::Items::Engine.load_seed
 
 # Added by Refinery CMS Departments extension
 Refinery::Departments::Engine.load_seed
+
+# Added by Refinery CMS Partners extension
+Refinery::Partners::Engine.load_seed
