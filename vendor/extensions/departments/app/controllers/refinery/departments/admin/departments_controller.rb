@@ -2,6 +2,8 @@ module Refinery
   module Departments
     module Admin
       class DepartmentsController < ::Refinery::AdminController
+        helper ApplicationHelper
+        helper CollectionHelper
 
         crudify :'refinery/departments/department'
 
