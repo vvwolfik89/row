@@ -1,0 +1,42 @@
+en:
+  refinery:
+    plugins:
+      sport_rowings:
+        title: Sport Rowings
+    sport_rowings:
+      admin:
+        sport_rowings:
+          actions:
+            create_new: Add New Sport Rowing
+            reorder: Reorder Sport Rowings
+            reorder_done: Done Reordering Sport Rowings
+          records:
+            title: Sport Rowings
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Sport Rowings yet. Click "Add New Sport Rowing" to add your first sport rowing.
+          sport_rowing:
+            view_live_html: View this sport rowing live <br/><em>(opens in a new window)</em>
+            edit: Edit this sport rowing
+            delete: Remove this sport rowing forever
+      sport_rowings:
+        show:
+          other: Other Sport Rowings
+  activerecord:
+    attributes:
+      'refinery/sport_rowings/sport_rowing':
+        title: Title
+        kind: Kind
+        icon: Icon
+        description: Description
+        short_name: Short Name
+        count_athletes: Count Athletes
+        is_active: Is Active
+  kinds:
+    academic_rowing: Academic Rowing
+    kayaking_canoeing: Kayaking and Canoeing
+  short_name:
+    errors:
+      not_uniq: not uniq
+  count_athletes:
+    errors:
+      not_uniq: not uniq

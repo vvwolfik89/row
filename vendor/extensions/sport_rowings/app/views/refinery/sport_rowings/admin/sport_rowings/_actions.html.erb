@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::SportRowings::Admin::SportRowingsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.sport_rowings_admin_sport_rowings_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_sport_rowings_admin_sport_rowing_path, t('.create_new') %>
+  </li>
+  <% if !searching? && ::Refinery::SportRowings::Admin::SportRowingsController.sortable? && ::Refinery::SportRowings::SportRowing.many? %>
+    <li>
+      <%= action_label :reorder,
+                       refinery.sport_rowings_admin_sport_rowings_path,
+                       t('.reorder', what: "Sport Rowings"), id: 'reorder_action' %>
+      <%= action_label :reorder_done,
+                       refinery.sport_rowings_admin_sport_rowings_path,
+                       t('.reorder_done', what: "Sport Rowings"), id: 'reorder_action_done', class: 'hidden' %>
+    </li>
+  <% end %>
+</ul>

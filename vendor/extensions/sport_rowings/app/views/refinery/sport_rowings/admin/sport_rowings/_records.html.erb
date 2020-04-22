@@ -1,0 +1,16 @@
+<%= render 'refinery/admin/search_header', :url => refinery.sport_rowings_admin_sport_rowings_path %>
+<div class='pagination_container'>
+  <% if @sport_rowings.any? %>
+    <%= render 'sport_rowings' %>
+  <% else %>
+    <p>
+      <% if searching? %>
+        <%= t('no_results', :scope => 'refinery.admin.search') %>
+      <% else %>
+        <strong>
+          <%= t('.no_items_yet') %>
+        </strong>
+      <% end %>
+    </p>
+  <% end %>
+</div>

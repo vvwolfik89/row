@@ -1,0 +1,31 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(sport_rowing) -%>">
+  <span class='title'>
+    <%= translated_field(sport_rowing, :title) %>
+  </span>
+
+  <% if Refinery::I18n.frontend_locales.many? %>
+    <span class='locales'>
+      <% sport_rowing.translations.sort_by {|t| Refinery::I18n.frontend_locales.index(t.locale)}.each do |translation| %>
+        <% if translation.title.present? %>
+          <%= link_to refinery.edit_sport_rowings_admin_sport_rowing_path(sport_rowing, :switch_locale => translation.locale),
+                      class: 'locale', title: translation.locale.upcase do %>
+
+            <div class="<%= translation.locale %> locale_marker">
+              <%= locale_text_icon(translation.locale.upcase) %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </span>
+  <% end %>
+
+  <span class='preview'></span>
+
+  <span class='actions'>
+    <%= action_icon(:preview, refinery.sport_rowings_sport_rowing_path(sport_rowing), t('.view_live_html')) %>
+    <%= action_icon(:edit, refinery.edit_sport_rowings_admin_sport_rowing_path(sport_rowing), t('.edit')) %>
+    <%= action_icon(:delete, refinery.sport_rowings_admin_sport_rowing_path(sport_rowing), t('.delete'),
+                    {class: "cancel confirm-delete",
+                     data: {confirm: t('message', scope: 'refinery.admin.delete', title: sport_rowing.title)}}) %>
+  </span>
+</li>
