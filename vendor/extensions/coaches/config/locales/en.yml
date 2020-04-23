@@ -1,0 +1,37 @@
+en:
+  refinery:
+    plugins:
+      coaches:
+        title: Coaches
+    coaches:
+      admin:
+        coaches:
+          actions:
+            create_new: Add New Coach
+            reorder: Reorder Coaches
+            reorder_done: Done Reordering Coaches
+          records:
+            title: Coaches
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Coaches yet. Click "Add New Coach" to add your first coach.
+          coach:
+            view_live_html: View this coach live <br/><em>(opens in a new window)</em>
+            edit: Edit this coach
+            delete: Remove this coach forever
+      coaches:
+        show:
+          other: Other Coaches
+  activerecord:
+    attributes:
+      'refinery/coaches/coach':
+        first_name: First Name
+        last_name: Last Name
+        patronymic: Patronymic
+        bday: Bday
+        rowing_type: Rowing Type
+        icon: Icon
+        description: Description
+        position: Position
+  rowing_types:
+    academic_rowing: Academic Rowing
+    kayaking_canoeing: Kayaking and Canoeing

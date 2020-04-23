@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200422191759) do
+ActiveRecord::Schema.define(version: 20200423140840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,33 @@ ActiveRecord::Schema.define(version: 20200422191759) do
     t.string "full_name"
     t.index ["id"], name: "index_refinery_authentication_devise_users_on_id"
     t.index ["slug"], name: "index_refinery_authentication_devise_users_on_slug"
+  end
+
+  create_table "refinery_coach_translations", force: :cascade do |t|
+    t.integer "refinery_coach_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "patronymic"
+    t.text "description"
+    t.string "position"
+    t.index ["locale"], name: "index_refinery_coach_translations_on_locale"
+    t.index ["refinery_coach_id"], name: "index_refinery_coach_translations_on_refinery_coach_id"
+  end
+
+  create_table "refinery_coaches", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "patronymic"
+    t.date "bday"
+    t.integer "rowing_type"
+    t.integer "icon_id"
+    t.text "description"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_department_translations", force: :cascade do |t|

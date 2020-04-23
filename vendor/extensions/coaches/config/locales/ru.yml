@@ -1,0 +1,37 @@
+ru:
+  refinery:
+    plugins:
+      coaches:
+        title: Тренера
+    coaches:
+      admin:
+        coaches:
+          actions:
+            create_new: Добавить Тренера
+            reorder: Изменить порядок Тренеров
+            reorder_done: Закончить изменять порядок Тренеров
+          records:
+            title: Тренера
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Тренеров" не найдено. Нажмите "Добавить Тренера" чтобы создать тренера.
+          coach:
+            view_live_html: Просмотреть Тренера вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать Тренера
+            delete: Удалить Тренера навсегда
+      coaches:
+        show:
+          other: Другие Тренера
+  activerecord:
+    attributes:
+      'refinery/coaches/coach':
+        first_name: Имя
+        last_name: Фамилия
+        patronymic: Отчество
+        bday: День Рождения
+        rowing_type: Тип Гребли
+        icon: Фото
+        description: Описание
+        position: Должность
+  rowing_types:
+    academic_rowing: Академическая Гребля
+    kayaking_canoeing: Гребля на байдарках и каноэ
