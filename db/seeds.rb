@@ -20,3 +20,6 @@ Refinery::Partners::Engine.load_seed
 
 # Added by Refinery CMS SportRowings extension
 Refinery::SportRowings::Engine.load_seed
+
+# Added by Refinery CMS Athletes extension
+Refinery::Athletes::Engine.load_seed

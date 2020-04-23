@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Athletes::Admin::AthletesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.athletes_admin_athletes_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_athletes_admin_athlete_path, t('.create_new') %>
+  </li>
+  <% if !searching? && ::Refinery::Athletes::Admin::AthletesController.sortable? && ::Refinery::Athletes::Athlete.many? %>
+    <li>
+      <%= action_label :reorder,
+                       refinery.athletes_admin_athletes_path,
+                       t('.reorder', what: "Athletes"), id: 'reorder_action' %>
+      <%= action_label :reorder_done,
+                       refinery.athletes_admin_athletes_path,
+                       t('.reorder_done', what: "Athletes"), id: 'reorder_action_done', class: 'hidden' %>
+    </li>
+  <% end %>
+</ul>

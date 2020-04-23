@@ -11,6 +11,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( wymeditor/lang/ru.js )
 Rails.application.config.assets.precompile += %w( wymeditor/lang/en.js )
 
+Rails.application.config.assets.precompile += %w( custom.scss )
+Rails.application.config.assets.precompile += %w( custom.js )
+
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

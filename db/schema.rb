@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200422102449) do
+ActiveRecord::Schema.define(version: 20200422191759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "refinery_athlete_translations", force: :cascade do |t|
+    t.integer "refinery_athlete_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "patronymic"
+    t.string "territorial_unit"
+    t.string "educational_institution"
+    t.string "organisation"
+    t.string "first_organisation"
+    t.index ["locale"], name: "index_refinery_athlete_translations_on_locale"
+    t.index ["refinery_athlete_id"], name: "index_refinery_athlete_translations_on_refinery_athlete_id"
+  end
+
+  create_table "refinery_athletes", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "patronymic"
+    t.date "bday"
+    t.integer "type_rowing"
+    t.string "territorial_unit"
+    t.string "educational_institution"
+    t.string "organisation"
+    t.string "first_organisation"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "refinery_authentication_devise_roles", id: :serial, force: :cascade do |t|
     t.string "title"
