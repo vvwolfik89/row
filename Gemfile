@@ -75,6 +75,7 @@ gem 'refinerycms-acts-as-indexed', ['~> 3.0', '>= 3.0.0']
 gem 'refinerycms-wymeditor', ['~> 2.0', '>= 2.0.0']
 gem 'refinerycms-authentication-devise', '~> 2.0'
 gem 'refinerycms-i18n'
+gem 'refinerycms-bootstrap'
 #  gem 'refinerycms-blog', ['~> 4.0', '>= 4.0.0']
 #  gem 'refinerycms-inquiries', ['~> 4.0', '>= 4.0.0']
 #  gem 'refinerycms-search', ['~> 4.0', '>= 4.0.0']
