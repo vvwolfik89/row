@@ -4,6 +4,9 @@ PATH
     refinerycms-athletes (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
+    refinerycms-coaches (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.3)
     refinerycms-departments (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
@@ -411,6 +414,7 @@ DEPENDENCIES
   refinerycms-athletes!
   refinerycms-authentication-devise (~> 2.0)
   refinerycms-bootstrap
+  refinerycms-coaches!
   refinerycms-departments!
   refinerycms-employees!
   refinerycms-i18n

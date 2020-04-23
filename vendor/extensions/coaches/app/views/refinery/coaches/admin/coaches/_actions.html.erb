@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Coaches::Admin::CoachesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.coaches_admin_coaches_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_coaches_admin_coach_path, t('.create_new') %>
+  </li>
+  <% if !searching? && ::Refinery::Coaches::Admin::CoachesController.sortable? && ::Refinery::Coaches::Coach.many? %>
+    <li>
+      <%= action_label :reorder,
+                       refinery.coaches_admin_coaches_path,
+                       t('.reorder', what: "Coaches"), id: 'reorder_action' %>
+      <%= action_label :reorder_done,
+                       refinery.coaches_admin_coaches_path,
+                       t('.reorder_done', what: "Coaches"), id: 'reorder_action_done', class: 'hidden' %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,31 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(coach) -%>">
+  <span class='title'>
+    <%= translated_field(coach, :first_name) %>
+  </span>
+
+  <% if Refinery::I18n.frontend_locales.many? %>
+    <span class='locales'>
+      <% coach.translations.sort_by {|t| Refinery::I18n.frontend_locales.index(t.locale)}.each do |translation| %>
+        <% if translation.first_name.present? %>
+          <%= link_to refinery.edit_coaches_admin_coach_path(coach, :switch_locale => translation.locale),
+                      class: 'locale', title: translation.locale.upcase do %>
+
+            <div class="<%= translation.locale %> locale_marker">
+              <%= locale_text_icon(translation.locale.upcase) %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </span>
+  <% end %>
+
+  <span class='preview'></span>
+
+  <span class='actions'>
+    <%= action_icon(:preview, refinery.coaches_coach_path(coach), t('.view_live_html')) %>
+    <%= action_icon(:edit, refinery.edit_coaches_admin_coach_path(coach), t('.edit')) %>
+    <%= action_icon(:delete, refinery.coaches_admin_coach_path(coach), t('.delete'),
+                    {class: "cancel confirm-delete",
+                     data: {confirm: t('message', scope: 'refinery.admin.delete', title: coach.first_name)}}) %>
+  </span>
+</li>
