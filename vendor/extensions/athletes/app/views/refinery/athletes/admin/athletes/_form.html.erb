@@ -1,0 +1,29 @@
+<%= custom_form_for([refinery, :athletes_admin, @athlete], bootstrap3_form_options) do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+             :object => @athlete,
+             :include_object_name => true %>
+
+  <%= render '/refinery/admin/locale_picker',
+             :current_locale => Globalize.locale %>
+
+  <%= f.input :first_name -%>
+  <%= f.input :last_name -%>
+  <%= f.input :patronymic -%>
+  <div class='field'>
+    <%= f.label :bday -%>
+    <%= f.date_select :bday -%>
+  </div>
+  <%= f.input :type_rowing -%>
+  <%= f.input :territorial_unit -%>
+  <%= f.input :educational_institution -%>
+  <%= f.input :organisation -%>
+  <%= f.input :first_organisation -%>
+
+
+
+  <%= render '/refinery/admin/form_actions', f: f,
+             continue_editing: false,
+             delete_title: t('delete', scope: 'refinery.athletes.admin.athletes.athlete'),
+             delete_confirmation: t('message', scope: 'refinery.admin.delete', title: @athlete.first_name),
+             cancel_url: refinery.athletes_admin_athletes_path -%>
+<% end -%>

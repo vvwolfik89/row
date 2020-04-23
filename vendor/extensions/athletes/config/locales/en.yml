@@ -1,0 +1,35 @@
+en:
+  refinery:
+    plugins:
+      athletes:
+        title: Athletes
+    athletes:
+      admin:
+        athletes:
+          actions:
+            create_new: Add New Athlete
+            reorder: Reorder Athletes
+            reorder_done: Done Reordering Athletes
+          records:
+            title: Athletes
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Athletes yet. Click "Add New Athlete" to add your first athlete.
+          athlete:
+            view_live_html: View this athlete live <br/><em>(opens in a new window)</em>
+            edit: Edit this athlete
+            delete: Remove this athlete forever
+      athletes:
+        show:
+          other: Other Athletes
+  activerecord:
+    attributes:
+      'refinery/athletes/athlete':
+        first_name: First Name
+        last_name: Last Name
+        patronymic: Patronymic
+        bday: Bday
+        type_rowing: Type Rowing
+        territorial_unit: Territorial Unit
+        educational_institution: Educational Institution
+        organisation: Organisation
+        first_organisation: First Organisation

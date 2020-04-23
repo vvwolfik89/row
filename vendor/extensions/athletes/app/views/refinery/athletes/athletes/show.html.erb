@@ -1,0 +1,75 @@
+<% content_for :body_content_title do %>
+  <%= @athlete.first_name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>First Name</h1>
+    <p>
+      <%= raw @athlete.first_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Last Name</h1>
+    <p>
+      <%= raw @athlete.last_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Patronymic</h1>
+    <p>
+      <%= raw @athlete.patronymic %>
+    </p>
+  </section>
+  <section>
+    <h1>Bday</h1>
+    <p>
+      <%= raw @athlete.bday %>
+    </p>
+  </section>
+  <section>
+    <h1>Type Rowing</h1>
+    <p>
+      <%= raw @athlete.type_rowing %>
+    </p>
+  </section>
+  <section>
+    <h1>Territorial Unit</h1>
+    <p>
+      <%= raw @athlete.territorial_unit %>
+    </p>
+  </section>
+  <section>
+    <h1>Educational Institution</h1>
+    <p>
+      <%= raw @athlete.educational_institution %>
+    </p>
+  </section>
+  <section>
+    <h1>Organisation</h1>
+    <p>
+      <%= raw @athlete.organisation %>
+    </p>
+  </section>
+  <section>
+    <h1>First Organisation</h1>
+    <p>
+      <%= raw @athlete.first_organisation %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="athletes">
+      <% @athletes.each do |athlete| %>
+        <li>
+          <%= link_to athlete.first_name, refinery.athletes_athlete_path(athlete) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

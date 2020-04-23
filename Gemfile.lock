@@ -1,6 +1,9 @@
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-athletes (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.3)
     refinerycms-departments (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
@@ -397,6 +400,7 @@ DEPENDENCIES
   rails (~> 5.1.7)
   refinerycms (~> 4.0)
   refinerycms-acts-as-indexed (~> 3.0, >= 3.0.0)
+  refinerycms-athletes!
   refinerycms-authentication-devise (~> 2.0)
   refinerycms-departments!
   refinerycms-employees!
