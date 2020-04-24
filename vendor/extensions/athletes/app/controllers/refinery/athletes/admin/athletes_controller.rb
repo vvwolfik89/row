@@ -12,7 +12,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def athlete_params
-          params.require(:athlete).permit(:first_name, :last_name, :patronymic, :bday, :type_rowing, :territorial_unit, :educational_institution, :organisation, :first_organisation)
+          params.require(:athlete).permit(:first_name, :last_name, :patronymic, :bday, :rowing_type, :territorial_unit, :educational_institution, :organisation, :first_organisation, :icon_id)
         end
       end
     end

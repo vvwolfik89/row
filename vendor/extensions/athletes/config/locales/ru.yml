@@ -33,3 +33,6 @@ ru:
         educational_institution: Учреждение в которую зачислен спортсмен
         organisation: Организация за которую выступает спортсмен
         first_organisation: Учреждение в которой проходил подготовку спортсмен на ранних этапах
+  rowing_types:
+    academic_rowing: Академическая Гребля
+    kayaking_canoeing: Гребля на байдарках и каноэ
