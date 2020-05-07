@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200424211510) do
+ActiveRecord::Schema.define(version: 20200425201441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -343,6 +343,16 @@ ActiveRecord::Schema.define(version: 20200424211510) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.string "title"
+    t.string "located"
+    t.date "start_date"
+    t.text "description"
+    t.integer "place"
+    t.integer "athlete_id"
+    t.string "locale"
   end
 
   create_table "seo_meta", id: :serial, force: :cascade do |t|

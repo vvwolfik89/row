@@ -31,4 +31,15 @@
 
 ru:
   hello: "Hello world"
-
+  activerecord:
+    attributes:
+      result:
+        title: название
+        last_name: Last Name
+        patronymic: Patronymic
+        bday: Bday
+        type_rowing: Type Rowing
+        territorial_unit: Territorial Unit
+        educational_institution: Educational Institution
+        organisation: Organisation
+        first_organisation: First Organisation

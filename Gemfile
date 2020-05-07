@@ -32,6 +32,7 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'font-awesome-rails'
 gem 'active_link_to'
 gem 'render_async'
+gem 'cocoon'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

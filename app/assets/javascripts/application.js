@@ -20,4 +20,6 @@
 //= require main
 //= require popper
 //= require bootstrap-sprockets
+//= require cocoon
+//= require cocoon_limit_relation
 //= require_tree .

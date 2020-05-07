@@ -1,0 +1,18 @@
+<div class="nested-fields form-group">
+  <fieldset class="nested-container">
+    <div class="col-sm-10">
+      <%= f.input :locale, as: :hidden, input_html: {value: locale} %>
+      <%= f.input :title %>
+      <%= f.input :located %>
+      <div class='field'>
+        <%= f.label :start_date -%>
+        <%= f.date_select :start_date, start_year: 1990 -%>
+      </div>
+      <%= f.input :description %>
+      <%= f.input :place %>
+    </div>
+    <div class="col-sm-2">
+      <%= link_to_remove_association 'Remove', f, class: 'btn btn-danger btn-large' %>
+    </div>
+  </fieldset>
+</div>
