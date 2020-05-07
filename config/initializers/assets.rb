@@ -13,6 +13,7 @@ Rails.application.config.assets.precompile += %w( wymeditor/lang/en.js )
 
 Rails.application.config.assets.precompile += %w( custom.scss )
 Rails.application.config.assets.precompile += %w( custom.js )
+Rails.application.config.assets.precompile += %w( cocoon_limit_relation.js )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets

@@ -44,6 +44,7 @@ Refinery::Core.configure do |config|
   # Register extra javascript for backend
   # config.register_javascript "prototype-rails"
   config.register_javascript "custom"
+  config.register_javascript "cocoon_limit_relation"
   # Register extra stylesheet for backend (optional options)
   config.register_stylesheet "custom", :media => 'screen'
 

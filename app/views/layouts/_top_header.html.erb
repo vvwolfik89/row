@@ -2,14 +2,25 @@
   <div class="container">
     <div class="d-sm-flex justify-content-between">
       <ul class="header-top__info mb-2 mb-sm-0">
-        <li><a href="tel:+01432152323"><span class="align-middle"><i class="ti-mobile"></i></span>+014 321 523 23</a></li>
-        <li><a href="mailto:info@example.com"><span class="align-middle"><i class="ti-email"></i></span>Info@example.com</a></li>
+        <li><a href="tel:+0175178096"><span class="align-middle"><i class="ti-mobile"></i></span>+017 517 80 96</a></li>
+        <li><a href="mailto:rcop_grebn_v@tut.by"><span class="align-middle"><i class="ti-email"></i></span>rcop_grebn_v@tut.by</a>
+        </li>
       </ul>
       <ul class="header-top__social">
-        <li><a href="#"><i class="ti-facebook"></i></a></li>
-        <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-        <li><a href="#"><i class="ti-instagram"></i></a></li>
-        <li><a href="#"><i class="ti-skype"></i></a></li>
+        <li><a href="https://www.facebook.com/zaslavlrowingcanal/"><i class="ti-facebook"></i></a></li>
+        <li><a href="https://instagram.com/rcoppogrebnym?igshid=vjxgo7w50og"><i class="ti-instagram"></i></a></li>
+        <!--        <li><a href="#"><i class="ti-skype"></i></a></li>-->
+        <div class="headerlocale">
+          <div class="localeposition">
+            <nav>
+
+            </nav>
+          </div>
+        </div>
+
+        <% ::Refinery::I18n.frontend_locales.each do |locale| %>
+          <%= link_to locale, refinery.url_for({locale: locale}), class: locale %>
+        <% end %>
       </ul>
     </div>
   </div>
