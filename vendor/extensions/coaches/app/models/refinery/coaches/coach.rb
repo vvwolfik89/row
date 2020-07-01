@@ -4,6 +4,7 @@ module Refinery
       self.table_name = 'refinery_coaches'
 
       enum rowing_type: %i(academic_rowing kayaking_canoeing)
+      enum type_of_staff: %i(coach doctor masseur)
 
 
       translates :first_name, :last_name, :patronymic, :description, :position
