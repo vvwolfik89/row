@@ -32,6 +32,11 @@ ru:
         icon: Фото
         description: Описание
         position: Должность
+        type_of_staff: Тип
   rowing_types:
     academic_rowing: Академическая Гребля
     kayaking_canoeing: Гребля на байдарках и каноэ
+  type_of_staffs:
+    coach: Тренер
+    doctor: Доктор
+    masseur: Массажист

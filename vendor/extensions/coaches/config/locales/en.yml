@@ -35,3 +35,7 @@ en:
   rowing_types:
     academic_rowing: Academic Rowing
     kayaking_canoeing: Kayaking and Canoeing
+  type_of_staffs:
+    coach: Coach
+    doctor: Doctor
+    masseur: Masseur
