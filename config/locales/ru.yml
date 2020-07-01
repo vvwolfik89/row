@@ -31,6 +31,7 @@
 
 ru:
   hello: "Hello world"
+  banner: "РЕСПУБЛИКАНСКИЙ ЦЕНТР ОЛИМПИЙСКОЙ ПОДГОТОВКИ ПО ГРЕБНЫМ ВИДАМ СПОРТА"
   activerecord:
     attributes:
       result:
@@ -43,3 +44,12 @@ ru:
         educational_institution: Educational Institution
         organisation: Organisation
         first_organisation: First Organisation
+  employee_types:
+    head: Директор
+    deputy_head: Заместитель директора
+    management_staff: Управленческий персонал
+    head_of_department: Начальник отдела
+    employee: Сотрудник
+  employees:
+    title: Познакомьтесь с нашими сотрудниками
+    description:

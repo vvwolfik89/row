@@ -31,4 +31,13 @@
 
 en:
   hello: "Hello world"
-
+  banner: 'Establishment of "National Center of Olympic training for rowing"'
+  employee_types:
+    head: Head
+    deputy_head: Deputy Head
+    management_staff: Management Staff
+    head_of_department: Head of Department
+    employee: Employee
+  employees:
+    title: Meet Our Employees
+    description:
