@@ -1,0 +1,33 @@
+<!--================ Team section start =================-->
+<section class="section-margin">
+  <div class="container">
+    <div class="section-intro text-center pb-65px">
+      <h2 class="section-intro__title"><%= t('employees.title') %></h2>
+      <!--      <p><%#= t('employees.description') %></p>-->
+    </div>
+    <div class="row">
+      <% build_employees_collection.each do |employee| %>
+        <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+          <div class="card card-team">
+            <%= image_fu employee.icon, nil, class: "card-img rounded-0", style: "height: auto" %>
+            <div class="card-team__body text-center">
+              <h3>
+                <a href="<%= employees_employee_path(employee.id) %>"><%= employee.last_name %> <%= employee.first_name %></a>
+              </h3>
+              <p><%= employee.position %></p>
+              <!--            <ul class="card-team__social">-->
+              <!--              <li><a href="#"><i class="ti-facebook"></i></a></li>-->
+              <!--              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>-->
+              <!--              <li><a href="#"><i class="ti-instagram"></i></a></li>-->
+              <!--              <li><a href="#"><i class="ti-skype"></i></a></li>-->
+              <!--            </ul>-->
+            </div>
+          </div>
+        </div>
+
+
+      <% end %>
+    </div>
+  </div>
+</section>
+<!--================ Team section end =================-->

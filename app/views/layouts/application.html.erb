@@ -22,16 +22,14 @@
 
   <body>
 
-  <%= render "layouts/top_header" %>
-  <%= render "/refinery/header" %>
-  <%= render "/refinery/banner" %>
+  <%= render "/top_header" %>
+  <%= render "/header" %>
+  <%= render "/banner" %>
 
-    <div>
-      <%= yield %>
-    </div>
+  <%= yield %>
 
 
-  <%= render "/refinery/footer" %>
+  <%= render "/footer" %>
 
 
   </body>
