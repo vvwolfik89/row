@@ -8,13 +8,19 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
-Rails.application.config.assets.precompile += %w( wymeditor/lang/ru.js )
-Rails.application.config.assets.precompile += %w( wymeditor/lang/en.js )
-
-Rails.application.config.assets.precompile += %w( custom.scss )
-Rails.application.config.assets.precompile += %w( custom.js )
-Rails.application.config.assets.precompile += %w( cocoon_limit_relation.js )
-
+Rails.application.config.assets.precompile += [
+  "wymeditor/lang/ru.js",
+  "wymeditor/lang/en.js",
+  "custom.scss",
+  "custom.js",
+  "cocoon_limit_relation.js",
+  "refinery/photo_gallery/admin/photo_gallery.css",
+  "refinery/photo_gallery/admin/chosen.css",
+  "refinery/photo_gallery/admin/photo_gallery.js",
+  "refinery/photo_gallery/admin/jquery.chosen.min.js",
+  "refinery/photo_gallery/admin/icons/loading.gif",
+  "libraries.js"
+]
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

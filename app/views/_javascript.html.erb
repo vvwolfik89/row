@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    $(function () {
+        $(".fancybox").fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+                beforeShow: function () {
+                    this.title = $(this.element).attr('data-title');
+                },
+                helpers: {
+                    title: {type: 'outside'},
+                    buttons: {},
+                    overlay: {
+                        opacity: 0.8,
+                        css: {
+                            'background-color': '#000'
+                        }
+                    }
+                }
+            }
+        );
+    }(jQuery));
+</script>

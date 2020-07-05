@@ -10,16 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
 //= require turbolinks
 //= require jquery3
 //= require jquery.dropotron.min
-//= require jquery.onvisible.min
 //= require skel.min
 //= require util
 //= require main
 //= require popper
-//= require bootstrap-sprockets
 //= require cocoon
 //= require cocoon_limit_relation
 //= require_tree .

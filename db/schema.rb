@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200701185436) do
+ActiveRecord::Schema.define(version: 20200703101744) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "refinery_album_pages", id: :serial, force: :cascade do |t|
+    t.integer "album_id"
+    t.integer "page_id"
+    t.string "page_type", default: "Refinery::Page"
+    t.index ["album_id"], name: "index_refinery_album_pages_on_album_id"
+    t.index ["page_id"], name: "index_refinery_album_pages_on_page_id"
+  end
 
   create_table "refinery_athlete_translations", force: :cascade do |t|
     t.integer "refinery_athlete_id", null: false
@@ -300,6 +308,51 @@ ActiveRecord::Schema.define(version: 20200701185436) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "refinery_photo_gallery_albums", id: :serial, force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description"
+    t.string "path"
+    t.string "address"
+    t.decimal "longitude", precision: 15, scale: 10
+    t.decimal "latitude", precision: 15, scale: 10
+    t.text "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["id"], name: "index_refinery_photo_gallery_albums_on_id", unique: true
+  end
+
+  create_table "refinery_photo_gallery_collection_albums", id: :serial, force: :cascade do |t|
+    t.integer "collection_id"
+    t.integer "album_id"
+    t.index ["album_id"], name: "index_rpg_collection_albums_on_album_id"
+    t.index ["collection_id"], name: "index_rpg_collection_albums_on_collection_id"
+  end
+
+  create_table "refinery_photo_gallery_collections", id: :serial, force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["id"], name: "index_refinery_photo_gallery_collections_on_id", unique: true
+  end
+
+  create_table "refinery_photo_gallery_photos", id: :serial, force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description"
+    t.string "path"
+    t.decimal "longitude", precision: 15, scale: 10
+    t.decimal "latitude", precision: 15, scale: 10
+    t.string "file"
+    t.integer "album_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "url"
+    t.string "css_class"
+    t.string "preview_type"
+    t.index ["album_id"], name: "index_refinery_photo_gallery_photos_on_album_id"
+    t.index ["id"], name: "index_refinery_photo_gallery_photos_on_id", unique: true
   end
 
   create_table "refinery_resource_translations", force: :cascade do |t|
