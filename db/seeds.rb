@@ -26,3 +26,6 @@ Refinery::Athletes::Engine.load_seed
 
 # Added by Refinery CMS Coaches extension
 Refinery::Coaches::Engine.load_seed
+
+# Added by Refinery CMS PhotoGallery engine
+Refinery::PhotoGallery::Engine.load_seed
