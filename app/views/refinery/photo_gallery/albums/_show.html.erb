@@ -1,0 +1,49 @@
+<% if @page.album.present? %>
+
+  <!-- Images used to open the lightbox -->
+  <div style="text-align:center">
+    <h2><%= @page.album.title %></h2>
+    <div style="width: 100%">
+      <%= raw @page.album.description %>
+    </div>
+    <p><%= t('photo_gallery.click') %></p>
+  </div>
+  <% photos_for_page = @page.photos_for_page(params[:page]) %>
+  <%#= will_paginate photos_for_page %>
+  <div class="row">
+    <% photos_for_page.each_with_index do |photo, index| %>
+      <div class="column">
+        <img src="<%= photo.preview_link(:album) %>" onclick="openModal();currentSlide(<%= index %>)" class="hover-shadow">
+      </div>
+    <% end %>
+  </div>
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <% photos_for_page.each_with_index do |photo, index| %>
+        <div class="mySlides">
+          <div class="numbertext"><%= index %></div>
+          <img src="<%= photo.link_url %>" style="width: 100%">
+        </div>
+      <% end %>
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail image controls -->
+    </div>
+    <% photos_for_page.each_with_index do |photo, index| %>
+      <div class="column">
+        <img class="demo" src="<%= photo.preview_link(:album) %>" onclick="currentSlide(<%= index %>)" alt="Nature">
+      </div>
+    <% end %>
+
+  </div>
+<% end %>
