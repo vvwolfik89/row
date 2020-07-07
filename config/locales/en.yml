@@ -43,3 +43,5 @@ en:
     description:
   photo_gallery:
     click: Click on the images below
+  news:
+    read_all_news: View All News

@@ -2,29 +2,29 @@ ru:
   refinery:
     plugins:
       departments:
-        title: Departments
+        title: Отделы
     departments:
       admin:
         departments:
           actions:
-            create_new: Добавить Department
-            reorder: Изменить порядок Departments
-            reorder_done: Закончить изменять порядок Departments
+            create_new: Добавить Отдел
+            reorder: Изменить порядок Отделов
+            reorder_done: Закончить изменять порядок Отделов
           records:
-            title: Departments
+            title: Отделы
             sorry_no_results: "Извините, поиск не дал результатов."
-            no_items_yet: Записей "Departments" не найдено. Нажмите "Добавить Department" чтобы создать department.
+            no_items_yet: Записей "Отделы" не найдено. Нажмите "Добавить Отдел" чтобы создать Отдел.
           department:
             view_live_html: Просмотреть department вживую <br/><em>(в новом окне)</em>
-            edit: Редактировать department
-            delete: Удалить department навсегда
+            edit: Редактировать Отдел
+            delete: Удалить Отдел навсегда
       departments:
         show:
-          other: Другие Departments
+          other: Другие Отделы
   activerecord:
     attributes:
       'refinery/departments/department':
-        title: Title
+        title: Наименование
         icon: Icon
-        description: Description
+        description: Описание
         is_active: Is Active
