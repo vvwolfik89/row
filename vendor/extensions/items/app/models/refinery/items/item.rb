@@ -16,6 +16,18 @@ module Refinery
       #
       acts_as_indexed :fields => [:title]
 
+      scope :with_filter, -> (options = {}) {
+        with_type(options[:type_news]).
+          search(options[:keyword]).
+          order(:title)
+      }
+
+      scope :with_type, -> (type) {where(type_news: type) if type.present?}
+
+      scope :search, -> (keyword) {
+        where("lower(refinery_item_translations.title) like :key", key: "%#{keyword.downcase}%") if keyword.present?
+      }
+
     end
   end
 end
