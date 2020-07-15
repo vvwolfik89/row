@@ -2,9 +2,9 @@
 <section class="section-margin">
   <div class="container">
     <div class="section-intro text-center pb-65px">
-      <h2 class="section-intro__title">Our Practice Area</h2>
-      <p>Female divided bearing rule one called said Beginning set you living above saw seasons void created fruitful
-        third years god.</p>
+      <h2 class="section-intro__title"><%= t("news.news") %></h2>
+      <!--      <p>Female divided bearing rule one called said Beginning set you living above saw seasons void created fruitful-->
+      <!--        third years god.</p>-->
     </div>
     <div class="row">
       <% build_news_collection.each do |news| %>
@@ -18,7 +18,7 @@
             </div>
             <div class="card-subject__body">
               <h3><a href="<%= items_item_path(news.id) %>"><%= news.title %></a></h3>
-              <%= news.content.html_safe %>
+              <%= news.content.html_safe if news.content %>
             </div>
           </div>
         </div>

@@ -41,8 +41,14 @@ en:
   employees:
     title: Meet Our Employees
     description:
+    count: Amount of Employees
   photo_gallery:
     click: Click on the images below
   news:
     read_all_news: View All News
     type_news: Type News
+    news: News
+  athletes:
+    academic_rowing: Athletes of Academic Rowing
+    kayaking_canoeing: Athletes of Kayaking Canoeing
+  our_partners: Our Partners

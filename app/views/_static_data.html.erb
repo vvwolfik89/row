@@ -2,28 +2,22 @@
 <section>
   <div class="container static__single-position">
     <div class="row">
-      <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
+      <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
         <div class="card static__single">
-          <h3>35</h3>
-          <h4>Dedicated Lawyer</h4>
+          <h3><%= count_employees %></h3>
+          <h4><%= t("employees.count") %></h4>
         </div>
       </div>
-      <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
+      <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
         <div class="card static__single">
-          <h3>1526</h3>
-          <h4>Sucessful Cases</h4>
+          <h3><%= grouped_athletes(0) %></h3>
+          <h4><%= t("athletes.academic_rowing") %></h4>
         </div>
       </div>
-      <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
+      <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
         <div class="card static__single">
-          <h3>720</h3>
-          <h4>Satisfied Client</h4>
-        </div>
-      </div>
-      <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
-        <div class="card static__single">
-          <h3>680</h3>
-          <h4>Personal Cases</h4>
+          <h3><%= grouped_athletes(1) %></h3>
+          <h4><%= t("athletes.kayaking_canoeing") %></h4>
         </div>
       </div>
     </div>
