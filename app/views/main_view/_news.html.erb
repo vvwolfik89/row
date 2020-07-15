@@ -1,0 +1,33 @@
+<!--================ Subject section start =================-->
+<section class="section-margin">
+  <div class="container">
+    <div class="section-intro text-center pb-65px">
+      <h2 class="section-intro__title"><%= t("news.news") %></h2>
+      <!--      <p>Female divided bearing rule one called said Beginning set you living above saw seasons void created fruitful-->
+      <!--        third years god.</p>-->
+    </div>
+    <div class="row">
+      <% build_news_collection.each do |news| %>
+        <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+          <div class="card card-subject">
+            <div class="card-subject__img">
+              <%= image_fu news.icon, nil, class: "card-img rounded-0", style: "height: auto" %>
+              <div class="card-subject__imgOverlay">
+                <img src="../images/home/news/<%= news.type_news %>.png" alt="">
+              </div>
+            </div>
+            <div class="card-subject__body">
+              <h3><a href="<%= items_item_path(news.id) %>"><%= news.title %></a></h3>
+              <%= news.content.html_safe if news.content %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-12 text-center mt-5 pt-xl-4">
+      <a class="button" href="/items"><%= t('news.read_all_news') %>
+        <span class="align-middle"><i class="ti-arrow-right"></i></span></a>
+    </div>
+  </div>
+</section>
+<!--================ Subject section end =================-->

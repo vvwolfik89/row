@@ -1,6 +1,6 @@
 <header class="header_area">
   <div class="main_menu">
-    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
       <div class="container box_1620">
         <a class="navbar-brand logo_h" href="/"><img src="/images/Emblema.png" alt=""></a>
         <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,8 +9,8 @@
           <span class="icon-bar"></span>
         </button>
 
-        <div class="collapse navbar-collapse offset position_nav textBold" id="navbarSupportedContent">
-          <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).tap {|p| p.dom_id = 'nav'; p.active_css = 'nav-item active'; p.link_tag_css = 'nav-link green'; p.list_tag_css = 'navbar-nav mr-auto navbar-default'}.to_html %>
+        <div class="collapse navbar-collapse textBold" id="navbarNavDropdown">
+          <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).tap {|p| p.dom_id = 'nav'; p.list_tag_css = 'navbar-nav'; p.link_tag_css = 'nav-link'; p.first_css = 'nav-item'; p.menu_tag = 'ul'; p.css = 'navbar-nav'}.to_html %>
         </div>
       </div>
     </nav>

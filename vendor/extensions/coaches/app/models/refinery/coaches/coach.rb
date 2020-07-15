@@ -17,6 +17,8 @@ module Refinery
       #
       acts_as_indexed :fields => [:first_name, :last_name, :patronymic]
 
+      scope :active, -> {where(is_active: true)}
+
     end
   end
 end

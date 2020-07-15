@@ -32,3 +32,5 @@ en:
         description: Description
         position: Position
         type_news: Type News
+  top_news: Popular News
+  news_categories: Post Catgories
