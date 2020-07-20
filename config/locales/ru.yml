@@ -54,6 +54,7 @@ ru:
     title: Познакомьтесь с нашими сотрудниками
     description:
     count: Сотрудников в РЦОП по гребным видам спорта г. Заславль
+    beginning_work_at: Работает с
   photo_gallery:
     click: Нажмите на изображение
   news:
@@ -64,3 +65,16 @@ ru:
     academic_rowing: Спортсменов национальной команды по гребли Академической
     kayaking_canoeing: Спортсменов национальной команды по гребли на Байдарках и Каноэ
   our_partners: Наши Партнеры
+  navigation_links: Навигация по сайту
+  address_data:
+    name: РЦОП по гребным видам спорта
+    address: Минский район, Заславль, ул. Гонолес, д. 1
+    post_index: 223036
+    e_mail: rcop_grebn_v@tut.by
+    phone_number: (017) 517 82 58
+    map: РЦОП на карте
+  phone_number: Телефон
+  search: Поиск
+  all_employees: Выбрать
+  all_departments: Выбрать отдел
+  view_more: Смотреть

@@ -1,11 +1,25 @@
-<% content_for :body do %>
-  <ul id="employees">
-    <% @employees.each do |employee| %>
-      <li>
-        <%= link_to employee.first_name, refinery.employees_employee_path(employee) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+<div class="container" style="padding-top: 2%; padding-bottom: 2%">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="blog_left_sidebar">
+        <% @employees.each do |employee| %>
+          <article class="row blog_item">
+            <div class="col-md-9">
+              <div class="blog_post">
+                <%= image_fu employee.icon, nil, class: "card-img rounded-0", style: "height: auto" %>
+                <div class="blog_details">
+                  <a href="employees/<%= employee.id %>">
+                    <h2><%= employee.full_name %></h2>
+                  </a>
+                  <%#= item.content.html_safe %>
+                  <a class="button button-blog" href="employees/<%= employee.id %>"><%= t('view_more') %></a>
+                </div>
+              </div>
+            </div>
+          </article>
+        <% end %>
+      </div>
+    </div>
+    <%= render "rigth_menu", items: @items %>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 module Refinery
   module Employees
     class Employee < Refinery::Core::BaseModel
+      include FullName
       self.table_name = 'refinery_employees'
 
 
@@ -19,7 +20,23 @@ module Refinery
       #
       acts_as_indexed :fields => [:first_name, :last_name, :patronymic]
 
+
+      scope :with_filter, -> (options = {}) {
+        with_type(options[:employee_type]).
+          with_department(options[:refinery_departments]).
+          search(options[:keyword]).
+          active
+      }
+
+      scope :search, -> (keyword) {
+        joins('JOIN refinery_employee_translations ON refinery_employee_translations.refinery_employee_id = refinery_employees.id').where('LOWER(refinery_employee_translations.first_name) ilike :key OR refinery_employee_translations.last_name ilike :key OR refinery_employee_translations.patronymic ilike :key', key: "%#{keyword.downcase}%") if keyword.present?
+      }
+
       scope :active, -> {where(is_active: true)}
+
+      scope :with_type, -> (type) {where(employee_type: type) if type.present?}
+
+      scope :with_department, -> (department_id) {joins(:refinery_departments).where('refinery_departments.id = ?', department_id) if department_id.present?}
 
     end
   end

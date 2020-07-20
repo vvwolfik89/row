@@ -19,7 +19,6 @@ module Refinery
       scope :with_filter, -> (options = {}) {
         with_type(options[:type_news]).
           search(options[:keyword]).
-          active.
           order(:title)
       }
 
@@ -28,8 +27,6 @@ module Refinery
       scope :search, -> (keyword) {
         where("lower(refinery_item_translations.title) like :key", key: "%#{keyword.downcase}%") if keyword.present?
       }
-
-      scope :active, -> {where(is_active: true)}
 
     end
   end

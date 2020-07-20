@@ -1,0 +1,60 @@
+<!--<div class="row">-->
+<!--  <div class="col-md-6">-->
+<!--    <div class="panel">-->
+<!--      <div class="panel-body">-->
+<%#= form_tag("/employees", class: "form-horizontal", method: :get) do %>
+<!--          <div class="form-group">-->
+<!--            <div class="col-sm-3">-->
+<%#= label_tag("keyword", "Name Keyword", class: "control-label") %>
+<!--            </div>-->
+<!--            <div class="col-sm-9">-->
+<%#= text_field_tag("keyword", params[:keyword], class: "form-control") %>
+<!--            </div>-->
+<!--          </div>-->
+
+
+<%#= f.input :employee_type, collection: Refinery::Employees::Employee.employee_types.map {|key, _| [t("employee_types.#{key}"), key]} %>
+
+<%#= f.association :refinery_departments, collection: Refinery::Departments::Department.active.map {|key, _| [key.title, key.id]}, label: 'Department',  include_blank: true%>
+
+<%#= f.input :type_education, collection: Refinery::Employees::Employee.type_educations.map {|key, _| [t("type_educations.#{key}"), key]} %>
+<!--          <div class="form-group">-->
+<!--            <div class="col-sm-3">-->
+<%#= label_tag("field", "Field Keyword", class: "control-label") %>
+<!--            </div>-->
+<!--            <div class="col-sm-9">-->
+<%#= text_field_tag("field", params[:field], id: "field", class: "form-control") %>
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <div class="col-sm-3">-->
+<%#= label_tag("did_number", "DID Number", class: "control-label") %>
+<!--            </div>-->
+<!--            <div class="col-sm-9">-->
+<!--              <div class="input-group">-->
+<%#= text_field_tag("did_number", params[:did_number], class: "form-control", placeholder: "DID Number") %>
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <div class="col-sm-3">-->
+<%#= label_tag("hot_transfer_number", "Hot Transfer Number", class: "control-label") %>
+<!--            </div>-->
+<!--            <div class="col-sm-9">-->
+<!--              <div class="input-group">-->
+<%#= text_field_tag("hot_transfer_number", params[:hot_transfer_number], class: "form-control") %>
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <div class="col-sm-offset-3 col-sm-4">-->
+<!--              <div class="controls">-->
+<%#= submit_tag("Filter", class: "btn btn-info btn-block") %>
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<%# end %>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
