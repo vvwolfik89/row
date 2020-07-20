@@ -42,6 +42,7 @@ en:
     title: Meet Our Employees
     description:
     count: Amount of Employees
+    beginning_work_at: Work at
   photo_gallery:
     click: Click on the images below
   news:
@@ -52,3 +53,16 @@ en:
     academic_rowing: Athletes of Academic Rowing
     kayaking_canoeing: Athletes of Kayaking Canoeing
   our_partners: Our Partners
+  navigation_links: Navigation Links
+  address_data:
+    name: Republican centre of Olympic training for rowing sports
+    address: Minsk district, Zaslavl, St. Gonales., 1
+    post_index: 223036
+    e_mail: rcop_grebn_v@tut.by
+    phone_number: (017) 517 82 58
+    map: RCOT on MAP
+  phone_number: Phone number
+  search: Search
+  all_employees: All
+  all_departments: All Departments
+  view_more: View More

@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel">
+      <div class="panel-heading">
+        <span class="panel-title">
+          <span class="fa fa-filter"></span>Filter
+        </span>
+      </div>
+      <div class="panel-body">
+        <%= form_tag(clients_path, class: "form-horizontal", method: :get) do %>
+          <div class="form-group">
+            <div class="col-sm-3">
+              <%= label_tag("campaign_id", "Campaign", class: "control-label") %>
+            </div>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-headphones"></i>
+                </span>
+                <%= campaigns_filter_select %>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-3">
+              <%= label_tag("is_active", "Is Active", class: "control-label") %>
+            </div>
+            <div class="col-md-9">
+              <%= select_tag("is_active", options_for_select([['Yes', true], ['No', false]], params[:is_active]), prompt: "", class: "form-control") %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-3">
+              <%= label_tag("keyword", "Name Keyword", class: "control-label") %>
+            </div>
+            <div class="col-sm-9">
+              <%= text_field_tag("keyword", params[:keyword], class: "form-control") %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-3">
+              <%= label_tag("field", "Field Keyword", class: "control-label") %>
+            </div>
+            <div class="col-sm-9">
+              <%= text_field_tag("field", params[:field], id: "field", class: "form-control") %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-3">
+              <%= label_tag("did_number", "DID Number", class: "control-label") %>
+            </div>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <%= text_field_tag("did_number", params[:did_number], class: "form-control", placeholder: "DID Number") %>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-3">
+              <%= label_tag("hot_transfer_number", "Hot Transfer Number", class: "control-label") %>
+            </div>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <%= text_field_tag("hot_transfer_number", params[:hot_transfer_number], class: "form-control") %>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-4">
+              <div class="controls">
+                <%= submit_tag("Filter", class: "btn btn-info btn-block") %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

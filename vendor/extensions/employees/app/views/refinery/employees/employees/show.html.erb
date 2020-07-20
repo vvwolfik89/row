@@ -1,99 +1,42 @@
-<% content_for :body_content_title do %>
-  <%= @employee.first_name %>
-<% end %>
-
-<% content_for :body do %>
-  <section>
-    <h1>First Name</h1>
+<!--Общий контейнер, в который мы обертываем все остальные-->
+<div class="wrap">
+  <div style="width: 100%">
+    <div style="width: 40%; float: left">
+      <%= image_fu @employee.icon, nil, class: "card-img rounded-0", style: "height: auto; width: 90%" %>
+    </div>
+    <div style="width: 60%; float: right">
+      <span class="company_description">
     <p>
-      <%= raw @employee.first_name %>
+      <%= raw @employee.full_name %>
     </p>
-  </section>
-  <section>
-    <h1>Last Name</h1>
-    <p>
-      <%= raw @employee.last_name %>
-    </p>
-  </section>
-  <section>
-    <h1>Patronymic</h1>
-    <p>
-      <%= raw @employee.patronymic %>
-    </p>
-  </section>
-  <section>
-    <h1>Employee Type</h1>
-    <p>
-      <%= raw @employee.employee_type %>
-    </p>
-  </section>
-  <section>
-    <h1>Type Education</h1>
-    <p>
-      <%= raw @employee.type_education %>
-    </p>
-  </section>
-  <section>
-    <h1>Education</h1>
-    <p>
-      <%= raw @employee.education %>
-    </p>
-  </section>
-  <section>
-    <h1>Phone</h1>
-    <p>
-      <%= raw @employee.phone %>
-    </p>
-  </section>
-  <section>
-    <h1>Bdate</h1>
-    <p>
-      <%= raw @employee.bdate %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%= raw @employee.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Position</h1>
-    <p>
+    <p style="font-size: 15px">
       <%= raw @employee.position %>
     </p>
-  </section>
-  <section>
-    <h1>Beginning Work At</h1>
-    <p>
-      <%= raw @employee.beginning_work_at %>
+    <p style="font-size: 15px">
+      <%= raw @employee.refinery_departments.last.title if @employee.refinery_departments.last.present? %>
     </p>
-  </section>
-  <section>
-    <h1>Icon</h1>
-    <p>
-      <%#= image_fu @employee.icon, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Is Active</h1>
-    <p>
-      <%= raw @employee.is_active %>
-    </p>
-  </section>
-<% end %>
+  </span>
+    </div>
+  </div>
 
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="employees">
-      <% @employees.each do |employee| %>
-        <li>
-          <%= link_to employee.first_name, refinery.employees_employee_path(employee) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
+  <!--Тэг <hr /> создает линию-->
+  <hr/>
+  <!--
+    Блок, который располагается под блоком с логотипом и описанием
+    В нем мы будем писать информацию о компании :D
+  -->
+  <div class="main_info">
+				<span class="site" style="font-size: 14px">
+				 <%= t('employees.beginning_work_at') %> <%= raw @employee.beginning_work_at.strftime('%m/%d/%Y') %>
+				</span>
+    <span class="info">
+					<span class="sized">
+						<%= t('phone_number') %>:
+					</span>
+					<strong><i><%= @employee.phone %></i></strong>
+					<br/>
+    </span>
+  </div>
+</div>
 
 <%= render '/refinery/content_page' %>

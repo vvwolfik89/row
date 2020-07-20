@@ -13,17 +13,17 @@
   <%= f.input :employee_type, collection: Refinery::Employees::Employee.employee_types.map {|key, _| [t("employee_types.#{key}"), key]} %>
   <div class='field'>
     <%= f.label :beginning_work_at -%>
-    <%= f.date_select :beginning_work_at -%>
+    <%= f.date_select :beginning_work_at, start_year: 1970 -%>
   </div>
   <%= f.input :type_education, collection: Refinery::Employees::Employee.type_educations.map {|key, _| [t("type_educations.#{key}"), key]} %>
   <%= f.input :education %>
   <%= f.input :phone %>
   <%= f.input :position %>
-  <%= f.association :refinery_departments, collection: Refinery::Departments::Department.active.map {|key, _| [key.title, key.id]}, label: 'Department' %>
+  <%= f.association :refinery_departments, collection: Refinery::Departments::Department.active.map {|key, _| [key.title, key.id]}, label: 'Department', include_blank: true %>
 
   <div class='field'>
     <%= f.label :bdate -%>
-    <%= f.date_select :bdate -%>
+    <%= f.date_select :bdate, start_year: 1970 -%>
   </div>
 
   <div class='field'>

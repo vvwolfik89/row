@@ -11,7 +11,7 @@
   <div class='form-group'>
     <%= f.label :bday, class: 'col-sm-3' -%>
     <div class="col-sm-9">
-      <%= f.date_select :bday -%>
+      <%= f.date_select :bday, start_year: 1970 -%>
     </div>
   </div>
   <%= f.input :rowing_type, collection: build_enum_collection(Refinery::Coaches::Coach.rowing_types, 'rowing_types'), include_blank: false -%>
