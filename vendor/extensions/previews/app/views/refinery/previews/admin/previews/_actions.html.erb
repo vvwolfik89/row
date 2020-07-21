@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Previews::Admin::PreviewsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.previews_admin_previews_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_previews_admin_preview_path, t('.create_new') %>
+  </li>
+  <% if !searching? && ::Refinery::Previews::Admin::PreviewsController.sortable? && ::Refinery::Previews::Preview.many? %>
+    <li>
+      <%= action_label :reorder,
+                       refinery.previews_admin_previews_path,
+                       t('.reorder', what: "Previews"), id: 'reorder_action' %>
+      <%= action_label :reorder_done,
+                       refinery.previews_admin_previews_path,
+                       t('.reorder_done', what: "Previews"), id: 'reorder_action_done', class: 'hidden' %>
+    </li>
+  <% end %>
+</ul>

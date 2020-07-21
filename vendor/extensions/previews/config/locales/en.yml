@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      previews:
+        title: Previews
+    previews:
+      admin:
+        previews:
+          actions:
+            create_new: Add New Preview
+            reorder: Reorder Previews
+            reorder_done: Done Reordering Previews
+          records:
+            title: Previews
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Previews yet. Click "Add New Preview" to add your first preview.
+          preview:
+            view_live_html: View this preview live <br/><em>(opens in a new window)</em>
+            edit: Edit this preview
+            delete: Remove this preview forever
+      previews:
+        show:
+          other: Other Previews
+  activerecord:
+    attributes:
+      'refinery/previews/preview':
+        title: Title
+        icon: Icon
+        description: Description
+        is_active: Is Active

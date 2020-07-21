@@ -17,6 +17,7 @@
 //= require util
 //= require main
 //= require popper
+//= require preview
 //= require cocoon
 //= require cocoon_limit_relation
 //= require_tree .

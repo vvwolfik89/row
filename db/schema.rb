@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200715212445) do
+ActiveRecord::Schema.define(version: 20200720210429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -354,6 +354,27 @@ ActiveRecord::Schema.define(version: 20200715212445) do
     t.string "preview_type"
     t.index ["album_id"], name: "index_refinery_photo_gallery_photos_on_album_id"
     t.index ["id"], name: "index_refinery_photo_gallery_photos_on_id", unique: true
+  end
+
+  create_table "refinery_preview_translations", force: :cascade do |t|
+    t.integer "refinery_preview_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.index ["locale"], name: "index_refinery_preview_translations_on_locale"
+    t.index ["refinery_preview_id"], name: "index_refinery_preview_translations_on_refinery_preview_id"
+  end
+
+  create_table "refinery_previews", force: :cascade do |t|
+    t.string "title"
+    t.integer "icon_id"
+    t.text "description"
+    t.boolean "is_active"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_resource_translations", force: :cascade do |t|

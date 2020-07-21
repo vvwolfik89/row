@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="previews">
+    <% @previews.each do |preview| %>
+      <li>
+        <%= link_to preview.title, refinery.previews_preview_path(preview) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

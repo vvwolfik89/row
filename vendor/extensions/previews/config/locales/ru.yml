@@ -1,0 +1,30 @@
+ru:
+  refinery:
+    plugins:
+      previews:
+        title: Previews
+    previews:
+      admin:
+        previews:
+          actions:
+            create_new: Добавить Preview
+            reorder: Изменить порядок Previews
+            reorder_done: Закончить изменять порядок Previews
+          records:
+            title: Previews
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Previews" не найдено. Нажмите "Добавить Preview" чтобы создать preview.
+          preview:
+            view_live_html: Просмотреть preview вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать preview
+            delete: Удалить preview навсегда
+      previews:
+        show:
+          other: Другие Previews
+  activerecord:
+    attributes:
+      'refinery/previews/preview':
+        title: Title
+        icon: Icon
+        description: Description
+        is_active: Is Active

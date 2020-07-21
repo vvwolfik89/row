@@ -49,6 +49,7 @@ en:
     read_all_news: View All News
     type_news: Type News
     news: News
+    view: View More
   athletes:
     academic_rowing: Athletes of Academic Rowing
     kayaking_canoeing: Athletes of Kayaking Canoeing
@@ -66,3 +67,4 @@ en:
   all_employees: All
   all_departments: All Departments
   view_more: View More
+  search_posts: Search Posts
