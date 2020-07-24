@@ -9,9 +9,9 @@
           <span class="icon-bar"></span>
         </button>
 
-        <div class="collapse navbar-collapse textBold" id="navbarNavDropdown">
-          <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).tap {|p| p.dom_id = 'nav'; p.list_tag_css = 'navbar-nav'; p.link_tag_css = 'nav-link'; p.first_css = 'nav-item'; p.menu_tag = 'ul'; p.css = 'navbar-nav'}.to_html %>
-        </div>
+        <!--        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">-->
+        <%= foundation_menu(refinery_menu_pages, list_tag_css: 'nav navbar-nav menu_nav justify-content-end').to_html %>
+        <!--        </div>-->
       </div>
     </nav>
   </div>

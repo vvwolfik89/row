@@ -15,7 +15,6 @@
 //= require jquery.dropotron.min
 //= require skel.min
 //= require util
-//= require main
 //= require popper
 //= require preview
 //= require cocoon

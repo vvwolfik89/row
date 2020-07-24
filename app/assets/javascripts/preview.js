@@ -12,5 +12,4 @@ document.addEventListener("DOMContentLoaded", function () {
     else {
         bg_popup.style.display = "flex";
     }
-    bg_popup.style.display = "flex";
 });
