@@ -1,5 +1,26 @@
 module ApplicationHelper
 
+# Creates a dropdown menu with items matching Refinery pages
+# and tags/css matching Foundation markup
+#
+# Options:
+# * *:menu_tag* - A wrapper for the lists
+# * *:dom_id* - The dom id for the wrapper
+# * *:css* - The css class for the wrapper
+# * *:list_dropdown_css* - The css class of the submenu list
+# * *:list_item_dropdown_css* - The css class of the main menu item that has a dropdown
+# * *:list_tag_css* - The css class of the main menu
+# * *:active_css* - The css class denoting a active menu item
+# * *:selected_css* - The css class denoting a current menu item
+
+  def foundation_menu(items, options = {})
+    presenter = Refinery::Pages::FoundationMenuPresenter.new(items, self)
+    %w(menu_tag dom_id css list_dropdown_css list_item_dropdown_css list_tag_css active_css selected_css).map(&:to_sym).each do |k|
+      presenter.send("#{k}=", options[k]) if options.has_key?(k)
+    end
+    presenter
+  end
+
   def custom_form_for(object, *args, &block)
     options = args.extract_options!
     simple_form_for(object, *(args << options.merge(builder: CustomFormBuilder)), &block)

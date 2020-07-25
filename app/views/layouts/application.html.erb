@@ -9,6 +9,7 @@
     <%= javascript_include_tag "libraries" %>
     <link rel="icon" href="../images/Fevicon.png" type="image/png">
 
+    <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/assets/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="/assets/linericon/style.css">
@@ -21,6 +22,7 @@
 
   <body>
 
+  <%= render "/preview" %>
   <%= render "/top_header" %>
   <%= render "/header" %>
   <%= render "/banner" %>
@@ -29,7 +31,6 @@
 
 
   <%= render "/footer" %>
-  <!--  <script src="/assets/owl-carousel/owl.carousel.min.js"></script>-->
   <!--  <script src="/assets/Magnific-Popup/jquery.magnific-popup.min.js"></script>-->
 
   <!--  <script src="/assets/jquery/jquery-3.2.1.min.js"></script>-->
@@ -39,6 +40,5 @@
   <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
   <script src="/assets/js/mail-script.js"></script>
   <script src="/assets/js/main.js"></script>
-
   </body>
 </html>

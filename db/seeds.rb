@@ -29,3 +29,6 @@ Refinery::Coaches::Engine.load_seed
 
 # Added by Refinery CMS PhotoGallery engine
 Refinery::PhotoGallery::Engine.load_seed
+
+# Added by Refinery CMS Previews extension
+Refinery::Previews::Engine.load_seed
