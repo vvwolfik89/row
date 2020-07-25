@@ -17,6 +17,7 @@
 //= require util
 //= require popper
 //= require preview
+//= require modal_carousel
 //= require cocoon
 //= require cocoon_limit_relation
 //= require_tree .
