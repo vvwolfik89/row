@@ -12,7 +12,11 @@
         <!--        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">-->
         <%= foundation_menu(refinery_menu_pages, list_tag_css: 'nav navbar-nav menu_nav justify-content-end').to_html %>
         <!--        </div>-->
+
       </div>
     </nav>
+  </div>
+  <div>
+    <marquee behavior="scroll" direction="left"><%= build_services_collection.html_safe %></marquee>
   </div>
 </header>

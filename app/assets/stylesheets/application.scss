@@ -119,3 +119,22 @@ body {
   top: -100px;
   left: 570px;
 }
+
+.row .service_image img {
+  height: 300px;
+  width: 300px;
+  border-radius: 150rem !important;
+}
+
+.service_row {
+  height: 400px;
+}
+
+.row .service_image {
+  padding: 20px;
+  padding-left: 40px;
+}
+
+.service_title, .service_description, .service_coast {
+  padding-top: 100px;
+}
