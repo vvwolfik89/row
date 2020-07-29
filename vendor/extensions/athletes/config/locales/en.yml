@@ -34,5 +34,12 @@ en:
         organisation: Organisation
         first_organisation: First Organisation
   rowing_types:
+    all: All Rowings
     academic_rowing: Academic Rowing
-    kayaking_canoeing: Kayaking and Canoeing
+    kayaking_rowing: Гребля на байдарках
+    canoe_rowing: Каноэ
+  genders:
+    all: Male/Famale
+    male: Male
+    female: Female
+  national_team: National Team

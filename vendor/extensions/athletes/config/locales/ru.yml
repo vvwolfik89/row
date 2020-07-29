@@ -34,5 +34,12 @@ ru:
         organisation: Организация за которую выступает спортсмен
         first_organisation: Учреждение в которой проходил подготовку спортсмен на ранних этапах
   rowing_types:
+    all: Все
     academic_rowing: Академическая Гребля
-    kayaking_canoeing: Гребля на байдарках и каноэ
+    kayaking_rowing: Гребля на байдарках
+    canoe_rowing: Каноэ
+  genders:
+    all:  Муж/Жен
+    male: Муж
+    female: Жен
+  national_team: Национальная Команда

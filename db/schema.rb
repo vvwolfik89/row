@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200720210429) do
+ActiveRecord::Schema.define(version: 20200726215510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "athletes_current_coach", id: false, force: :cascade do |t|
+    t.bigint "refinery_coach_id", null: false
+    t.bigint "refinery_athlete_id", null: false
+    t.index ["refinery_athlete_id"], name: "index_athletes_current_coach_on_refinery_athlete_id"
+    t.index ["refinery_coach_id"], name: "index_athletes_current_coach_on_refinery_coach_id"
+  end
+
+  create_table "athletes_first_coach", id: false, force: :cascade do |t|
+    t.bigint "refinery_coach_id", null: false
+    t.bigint "refinery_athlete_id", null: false
+    t.index ["refinery_athlete_id"], name: "index_athletes_first_coach_on_refinery_athlete_id"
+    t.index ["refinery_coach_id"], name: "index_athletes_first_coach_on_refinery_coach_id"
+  end
 
   create_table "refinery_album_pages", id: :serial, force: :cascade do |t|
     t.integer "album_id"
@@ -53,6 +67,7 @@ ActiveRecord::Schema.define(version: 20200720210429) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "icon_id"
+    t.integer "gender", default: 0
   end
 
   create_table "refinery_authentication_devise_roles", id: :serial, force: :cascade do |t|
@@ -395,6 +410,32 @@ ActiveRecord::Schema.define(version: 20200720210429) do
     t.string "file_ext"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "refinery_service_translations", force: :cascade do |t|
+    t.integer "refinery_service_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.integer "coast"
+    t.index ["locale"], name: "index_refinery_service_translations_on_locale"
+    t.index ["refinery_service_id"], name: "index_refinery_service_translations_on_refinery_service_id"
+  end
+
+  create_table "refinery_services", force: :cascade do |t|
+    t.string "title"
+    t.integer "kind"
+    t.integer "icon_id"
+    t.text "description"
+    t.string "short_name"
+    t.integer "coast"
+    t.boolean "show_inline"
+    t.boolean "is_active"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_sport_rowing_translations", force: :cascade do |t|

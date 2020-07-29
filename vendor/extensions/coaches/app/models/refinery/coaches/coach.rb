@@ -1,6 +1,7 @@
 module Refinery
   module Coaches
     class Coach < Refinery::Core::BaseModel
+      include FullName
       self.table_name = 'refinery_coaches'
 
       enum rowing_type: %i(academic_rowing kayaking_canoeing)
