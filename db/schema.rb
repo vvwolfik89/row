@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200720210429) do
+ActiveRecord::Schema.define(version: 20200725155705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -395,6 +395,32 @@ ActiveRecord::Schema.define(version: 20200720210429) do
     t.string "file_ext"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "refinery_service_translations", force: :cascade do |t|
+    t.integer "refinery_service_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.integer "coast"
+    t.index ["locale"], name: "index_refinery_service_translations_on_locale"
+    t.index ["refinery_service_id"], name: "index_refinery_service_translations_on_refinery_service_id"
+  end
+
+  create_table "refinery_services", force: :cascade do |t|
+    t.string "title"
+    t.integer "kind"
+    t.integer "icon_id"
+    t.text "description"
+    t.string "short_name"
+    t.integer "coast"
+    t.boolean "show_inline"
+    t.boolean "is_active"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_sport_rowing_translations", force: :cascade do |t|

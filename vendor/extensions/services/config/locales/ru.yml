@@ -1,0 +1,37 @@
+ru:
+  refinery:
+    plugins:
+      services:
+        title: Услуги
+    services:
+      admin:
+        services:
+          actions:
+            create_new: Добавить Услугу
+            reorder: Изменить порядок Услуг
+            reorder_done: Закончить изменять порядок Услуг
+          records:
+            title: Услуги
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Услуги" не найдено. Нажмите "Добавить Услугу" чтобы создать услугу.
+          service:
+            view_live_html: Просмотреть Услугу вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать Услугу
+            delete: Удалить Услугу навсегда
+      services:
+        show:
+          other: Другие Услуги
+  activerecord:
+    attributes:
+      'refinery/services/service':
+        title: Наименование
+        kind: Тип
+        icon: Icon
+        description: Описание
+        short_name: Short Name
+        coast: Стоимоть(руб)
+        show_inline: Показывать в бегущей строке
+        is_active: Активная
+  kinds:
+    transport: Транспортные услуги
+    center: Услуги Акватории Канала
