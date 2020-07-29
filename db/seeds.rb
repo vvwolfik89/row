@@ -32,3 +32,6 @@ Refinery::PhotoGallery::Engine.load_seed
 
 # Added by Refinery CMS Previews extension
 Refinery::Previews::Engine.load_seed
+
+# Added by Refinery CMS Services extension
+Refinery::Services::Engine.load_seed

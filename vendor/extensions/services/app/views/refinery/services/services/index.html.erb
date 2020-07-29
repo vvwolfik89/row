@@ -1,0 +1,36 @@
+<%# content_for :body do %>
+<!--  <ul id="services">-->
+<%# @services.each do |service| %>
+<!--      <li>-->
+<%#= link_to service.title, refinery.services_service_path(service) %>
+<!--      </li>-->
+<%# end %>
+<!--  </ul>-->
+<%# end %>
+
+<%#= render '/refinery/content_page' %>
+<div class="container" style="padding-top: 2%; padding-bottom: 2%">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="blog_left_sidebar">
+        <% @services.each do |service| %>
+          <article class="row blog_item">
+            <div class="col-md-9">
+              <div class="blog_post">
+                <%= image_fu service.icon, nil, class: "card-img rounded-0", style: "height: auto" %>
+                <div class="blog_details">
+                  <a href="employees/<%= service.id %>">
+                    <h2><%= service.title %></h2>
+                  </a>
+                  <%#= item.content.html_safe %>
+                  <a class="button button-blog" href="services/<%= service.id %>"><%= t('view_more') %></a>
+                </div>
+              </div>
+            </div>
+          </article>
+        <% end %>
+      </div>
+    </div>
+    <%= render "rigth_menu", items: @services %>
+  </div>
+</div>

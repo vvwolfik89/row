@@ -22,6 +22,9 @@ PATH
     refinerycms-previews (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
+    refinerycms-services (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.3)
     refinerycms-sport_rowings (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
@@ -440,6 +443,7 @@ DEPENDENCIES
   refinerycms-partners!
   refinerycms-photo-gallery (~> 0.3.0)
   refinerycms-previews!
+  refinerycms-services!
   refinerycms-sport_rowings!
   refinerycms-wymeditor (~> 2.0, >= 2.0.0)
   render_async
