@@ -11,5 +11,8 @@ class CreateJoinTableAthleteCoach < ActiveRecord::Migration[5.1]
     end
 
     add_column :refinery_athletes, :gender, :integer, default: 0
+    add_column :refinery_athletes, :is_active, :boolean, default: false
+    add_column :refinery_athletes, :description, :text
+    add_column :refinery_athlete_translations, :description, :text
   end
 end

@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20200726215510) do
     t.string "educational_institution"
     t.string "organisation"
     t.string "first_organisation"
+    t.text "description"
     t.index ["locale"], name: "index_refinery_athlete_translations_on_locale"
     t.index ["refinery_athlete_id"], name: "index_refinery_athlete_translations_on_refinery_athlete_id"
   end
@@ -68,6 +69,8 @@ ActiveRecord::Schema.define(version: 20200726215510) do
     t.datetime "updated_at", null: false
     t.integer "icon_id"
     t.integer "gender", default: 0
+    t.boolean "is_active", default: false
+    t.text "description"
   end
 
   create_table "refinery_authentication_devise_roles", id: :serial, force: :cascade do |t|

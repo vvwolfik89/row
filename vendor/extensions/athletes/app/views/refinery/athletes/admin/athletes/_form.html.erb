@@ -21,6 +21,7 @@
   <%= f.input :educational_institution -%>
   <%= f.input :organisation -%>
   <%= f.input :first_organisation -%>
+  <%= f.input :is_active -%>
 
   <div class='field'>
     <%= f.label :icon -%>
@@ -29,6 +30,13 @@
                :field => :icon_id,
                :image => @athlete.icon,
                :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+               :f => f,
+               :fields => [:description],
+               :object => "athletes/athlete" -%>
   </div>
 
   <div class="mt20">
