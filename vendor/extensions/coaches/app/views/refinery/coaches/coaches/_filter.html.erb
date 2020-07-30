@@ -1,0 +1,25 @@
+<div class="navbar1">
+  <div class="dropdown1">
+    <button class="dropbtn1"><%= params[:rowing_type].present? ? t("rowing_types.#{params[:rowing_type]}") : t("rowing_types.all") %>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content1">
+      <a href="/coaches?utf8=✓&rowing_type=&type_of_staff=<%= params[:type_of_staff] %> "><%= t("rowing_types.all") %></a>
+      <a href="/coaches?utf8=✓&rowing_type=academic_rowing&type_of_staff=<%= params[:type_of_staff] %> "><%= t("rowing_types.academic_rowing") %></a>
+      <a href="/coaches?utf8=✓&rowing_type=kayaking_rowing&type_of_staff=<%= params[:type_of_staff] %> "><%= t("rowing_types.kayaking_rowing") %></a>
+      <a href="/coaches?utf8=✓&rowing_type=canoe_rowing&type_of_staff=<%= params[:type_of_staff] %> "><%= t("rowing_types.canoe_rowing") %></a>
+    </div>
+  </div>
+
+  <div class="dropdown1">
+    <button class="dropbtn1"><%= params[:type_of_staff].present? ? t("type_of_staffs.#{params[:type_of_staff]}") : t("type_of_staffs.all") %>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content1">
+      <a href="/coaches?utf8=✓&type_of_staff=&type=<%= params[:academic_rowing] %> "><%= t("type_of_staffs.all") %></a>
+      <a href="/coaches?utf8=✓&type_of_staff=coach&type=<%= params[:academic_rowing] %> "><%= t("type_of_staffs.coach") %></a>
+      <a href="/coaches?utf8=✓&type_of_staff=doctor&type=<%= params[:academic_rowing] %> "><%= t("type_of_staffs.doctor") %></a>
+      <a href="/coaches?utf8=✓&type_of_staff=masseur&type=<%= params[:academic_rowing] %> "><%= t("type_of_staffs.masseur") %></a>
+    </div>
+  </div>
+</div>

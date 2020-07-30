@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200729213348) do
+ActiveRecord::Schema.define(version: 20200730131941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -139,6 +139,7 @@ ActiveRecord::Schema.define(version: 20200729213348) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "type_of_staff"
+    t.boolean "is_active", default: false
   end
 
   create_table "refinery_department_translations", force: :cascade do |t|

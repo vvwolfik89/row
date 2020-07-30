@@ -8,6 +8,7 @@ module Refinery
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @coach in the line below:
+        @coaches = Refinery::Coaches::Coach.with_filter(params)
         present(@page)
       end
 
