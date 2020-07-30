@@ -1,75 +1,3 @@
-<!--  <section>-->
-<!--    <h1>First Name</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.first_name %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>Last Name</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.last_name %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>Patronymic</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.patronymic %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>Bday</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.bday %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>Type Rowing</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.rowing_type %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>Territorial Unit</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.territorial_unit %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>Educational Institution</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.educational_institution %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>Organisation</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.organisation %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>First Organisation</h1>-->
-<!--    <p>-->
-<%#= raw @athlete.first_organisation %>
-<!--    </p>-->
-<!--  </section>-->
-<!--  <section>-->
-<!--    <h1>Icon</h1>-->
-<!--    <p>-->
-      <%#= image_fu @athlete.icon, nil %>
-<!--    </p>-->
-<!--  </section>-->
-
-<%# content_for :side_body do %>
-<!--  <aside>-->
-
-<!--  </aside>-->
-<%# end %>
-
-<%#= render '/refinery/content_page' %>
-
-
-
-
 <div class="container">
   <div class="row">
     <div class="athlete-card">
@@ -85,23 +13,14 @@
       </div>
       <div class="athlete-card-info-body">
         <dl>
-          <dd class="info-card__key">asf</dd>
-          <dt class="info-card__value">asd</dt>
-          <dd class="info-card__key">asf</dd>
-          <dt class="info-card__value">asd</dt>
-          <dd class="info-card__key">asf</dd>
-          <dt class="info-card__value">asd</dt>
-
+          <dd class="info-card__key"><%= t('type_sport') %>:</dd>
+          <dt class="info-card__value"><%= t("rowing_types.#{@athlete.rowing_type}") %></dt>
+          <dd class="info-card__key"><%= t('bday') %>:</dd>
+          <dt class="info-card__value"><%= @athlete.bday %></dt>
+          <dd class="info-card__key"><%= t('teritorial_unit') %>:</dd>
+          <dt class="info-card__value"><%= @athlete.territorial_unit %></dt>
         </dl>
       </div>
-
-
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12">
-
-      <h5 class="section-title h1"></h5>
-
     </div>
   </div>
 </div>

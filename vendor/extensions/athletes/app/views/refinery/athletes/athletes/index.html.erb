@@ -28,13 +28,13 @@
                   <div class="card-body text-center mt-4">
                     <h4 class="card-title"><%= athlete.full_name %></h4>
                     <p class="card-text"><%= athlete.territorial_unit %></p>
+                    <ul class="list-inline">
+                      <% if athlete.url_instagram.present? %>
+                        <li><a href="<%= athlete.url_instagram %>"><i class="ti-instagram bg-dark"></i></a></li>
+                      <% end %>
+                    </ul>
                     <a class="button button-blog " href="athletes/<%= athlete.id %>"><%= t('view_more') %></a>
-                    <!--                  <ul class="list-inline">-->
-                    <!--                    <li class="list-inline-item">-->
-                    <!--                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">-->
-                    <!--                        <i class="fa fa-facebook"></i>-->
-                    <!--                      </a>-->
-                    <!--                    </li>-->
+
                     <!--                    <li class="list-inline-item">-->
                     <!--                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">-->
                     <!--                        <i class="fa fa-twitter"></i>-->

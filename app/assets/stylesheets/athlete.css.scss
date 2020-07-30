@@ -281,7 +281,7 @@ section .section-title {
 }
 
 .athlete-card-info-body {
-
+  color: black;
 }
 
 .info-card__key {
@@ -290,10 +290,12 @@ section .section-title {
   clear: both;
   width: 32.41738%;
   margin-bottom: 6px;
+  font-size: 20px;
 }
 
 .info-card__value {
   width: 67.58262%;
   margin-bottom: 6px;
   float: right;
+  font-size: 18px;
 }
