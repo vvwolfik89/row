@@ -9,17 +9,8 @@
       <ul class="header-top__social">
         <li><a href="https://www.facebook.com/zaslavlrowingcanal/"><i class="ti-facebook"></i></a></li>
         <li><a href="https://instagram.com/rcoppogrebnym?igshid=vjxgo7w50og"><i class="ti-instagram"></i></a></li>
-        <!--        <li><a href="#"><i class="ti-skype"></i></a></li>-->
-        <div class="headerlocale">
-          <div class="localeposition">
-            <nav>
-
-            </nav>
-          </div>
-        </div>
-
         <% ::Refinery::I18n.frontend_locales.each do |locale| %>
-          <%= link_to locale, refinery.url_for({locale: locale}), class: locale %>
+          <li><%= link_to locale.upcase, refinery.url_for({locale: locale}), class: "#{locale} lang_link" %></li>
         <% end %>
       </ul>
     </div>

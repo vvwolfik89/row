@@ -52,7 +52,8 @@ en:
     view: View More
   athletes:
     academic_rowing: Athletes of Academic Rowing
-    kayaking_canoeing: Athletes of Kayaking Canoeing
+    kayaking: Athletes of Kayaking
+    canoeing: Athletes of Canoeing
   our_partners: Our Partners
   navigation_links: Navigation Links
   address_data:
