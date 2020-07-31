@@ -1,6 +1,6 @@
 module CollectionHelper
   def build_enum_collection(collection, description = nil)
-    collection.map {|position, index| [t("#{description}.#{position}"), index]}
+    collection.map {|position, _| [t("#{description}.#{position}"), position]}
   end
 
   def build_preview_collection

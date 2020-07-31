@@ -15,6 +15,7 @@
 @import "gallery.css.scss";
 @import "employee_style.css.scss";
 @import "preview.css.scss";
+@import "athlete.css.scss";
 
 body {
   background: #DDD;
@@ -137,4 +138,25 @@ body {
 
 .service_title, .service_description, .service_coast {
   padding-top: 100px;
+}
+
+.lang_link {
+  font-weight: bold;
+  color: #1BA600 !important;
+}
+
+.blog_right_sidebar .widget_title {
+  background: #151ade !important;
+}
+
+.blog_right_sidebar .search_widget .input-group .form-control {
+  background: #151ade !important;
+}
+
+.button {
+  background: #151ade !important;
+}
+
+.card-subject__imgOverlay {
+  background: rgba(22, 40, 255, 0.51) !important;
 }

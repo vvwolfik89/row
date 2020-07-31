@@ -1,11 +1,63 @@
-<% content_for :body do %>
-  <ul id="athletes">
-    <% @athletes.each do |athlete| %>
-      <li>
-        <%= link_to athlete.first_name, refinery.athletes_athlete_path(athlete) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render partial: "filter" %>
 
-<%= render '/refinery/content_page' %>
+
+
+<section id="team" class="pb-5">
+  <div class="container">
+    <h5 class="section-title h1"><%= t('national_team') %></h5>
+    <div class="row">
+      <!-- Team member -->
+      <% @athletes.each do |athlete| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip">
+            <div class="mainflip flip-0">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><%= image_fu athlete.icon, nil, class: "img-fluid", alt: "card image" %></p>
+                    <h4 class="card-title"><%= athlete.first_name %> <%= athlete.last_name %></h4>
+                    <p class="card-text">
+                      <%= t("rowing_types.#{athlete.rowing_type}") %>
+                    </p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title"><%= athlete.full_name %></h4>
+                    <p class="card-text"><%= athlete.territorial_unit %></p>
+                    <ul class="list-inline">
+                      <% if athlete.url_instagram.present? %>
+                        <li><a href="<%= athlete.url_instagram %>"><i class="ti-instagram bg-dark"></i></a></li>
+                      <% end %>
+                    </ul>
+                    <a class="button button-blog " href="athletes/<%= athlete.id %>"><%= t('view_more') %></a>
+
+                    <!--                    <li class="list-inline-item">-->
+                    <!--                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">-->
+                    <!--                        <i class="fa fa-twitter"></i>-->
+                    <!--                      </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="list-inline-item">-->
+                    <!--                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">-->
+                    <!--                        <i class="fa fa-skype"></i>-->
+                    <!--                      </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="list-inline-item">-->
+                    <!--                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">-->
+                    <!--                        <i class="fa fa-google"></i>-->
+                    <!--                      </a>-->
+                    <!--                    </li>-->
+                    <!--                  </ul>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

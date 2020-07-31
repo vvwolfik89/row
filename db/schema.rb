@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200725155705) do
+ActiveRecord::Schema.define(version: 20200730131941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "athletes_current_coach", id: false, force: :cascade do |t|
+    t.bigint "refinery_coach_id", null: false
+    t.bigint "refinery_athlete_id", null: false
+    t.index ["refinery_athlete_id"], name: "index_athletes_current_coach_on_refinery_athlete_id"
+    t.index ["refinery_coach_id"], name: "index_athletes_current_coach_on_refinery_coach_id"
+  end
+
+  create_table "athletes_first_coach", id: false, force: :cascade do |t|
+    t.bigint "refinery_coach_id", null: false
+    t.bigint "refinery_athlete_id", null: false
+    t.index ["refinery_athlete_id"], name: "index_athletes_first_coach_on_refinery_athlete_id"
+    t.index ["refinery_coach_id"], name: "index_athletes_first_coach_on_refinery_coach_id"
+  end
 
   create_table "refinery_album_pages", id: :serial, force: :cascade do |t|
     t.integer "album_id"
@@ -35,6 +49,7 @@ ActiveRecord::Schema.define(version: 20200725155705) do
     t.string "educational_institution"
     t.string "organisation"
     t.string "first_organisation"
+    t.text "description"
     t.index ["locale"], name: "index_refinery_athlete_translations_on_locale"
     t.index ["refinery_athlete_id"], name: "index_refinery_athlete_translations_on_refinery_athlete_id"
   end
@@ -53,6 +68,10 @@ ActiveRecord::Schema.define(version: 20200725155705) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "icon_id"
+    t.integer "gender", default: 0
+    t.boolean "is_active", default: false
+    t.text "description"
+    t.string "url_instagram"
   end
 
   create_table "refinery_authentication_devise_roles", id: :serial, force: :cascade do |t|
@@ -120,6 +139,7 @@ ActiveRecord::Schema.define(version: 20200725155705) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "type_of_staff"
+    t.boolean "is_active", default: false
   end
 
   create_table "refinery_department_translations", force: :cascade do |t|

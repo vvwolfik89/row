@@ -14,10 +14,15 @@
     <%= f.date_select :bday, start_year: 1970 -%>
   </div>
   <%= f.input :rowing_type, collection: build_enum_collection(Refinery::Athletes::Athlete.rowing_types, 'rowing_types'), include_blank: false -%>
+  <%= f.input :gender, collection: build_enum_collection(Refinery::Athletes::Athlete.genders, 'genders'), include_blank: false -%>
+  <%= f.association :first_coach, collection: Refinery::Coaches::Coach.all.map {|coach| [coach.full_name, coach.id]}, include_blank: false -%>
+  <%= f.association :current_coach, collection: Refinery::Coaches::Coach.all.map {|coach| [coach.full_name, coach.id]}, include_blank: false -%>
   <%= f.input :territorial_unit -%>
   <%= f.input :educational_institution -%>
   <%= f.input :organisation -%>
+  <%= f.input :url_instagram -%>
   <%= f.input :first_organisation -%>
+  <%= f.input :is_active -%>
 
   <div class='field'>
     <%= f.label :icon -%>
@@ -26,6 +31,13 @@
                :field => :icon_id,
                :image => @athlete.icon,
                :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+               :f => f,
+               :fields => [:description],
+               :object => "athletes/athlete" -%>
   </div>
 
   <div class="mt20">

@@ -1,0 +1,24 @@
+<div class="athlete-card">
+  <div class="athlete-card-name"><h5 class="section-title h1"><%= object.full_name %></h5></div>
+  <div class="athlete-icon">
+    <%= image_fu object.icon, nil, class: "", alt: "card image" %>
+  </div>
+</div>
+
+<div class="athlete-card-info">
+  <div class="athlete-card-info-header">
+    <%= object.full_name %>
+  </div>
+  <div class="athlete-card-info-body">
+    <dl>
+      <dd class="info-card__key"><%= t('type_sport') %>:</dd>
+      <dt class="info-card__value"><%= t("rowing_types.#{object.rowing_type}") %></dt>
+      <dd class="info-card__key"><%= t('bday') %>:</dd>
+      <dt class="info-card__value"><%= object.bday %></dt>
+      <% if object.try(:territorial_unit).present? %>
+        <dd class="info-card__key"><%= t('teritorial_unit') %>:</dd>
+        <dt class="info-card__value"><%= object.territorial_unit %></dt>
+      <% end %>
+    </dl>
+  </div>
+</div>
