@@ -34,6 +34,7 @@ gem 'font-awesome-rails'
 gem 'active_link_to'
 gem 'render_async'
 gem 'cocoon'
+gem 'rails-observers', git: 'https://github.com/rails/rails-observers.git'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
