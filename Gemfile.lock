@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/rails/rails-observers.git
+  revision: 389b577322d8b17336730b2dc4e179060a23c8e7
+  specs:
+    rails-observers (0.2.0)
+      activemodel (>= 4.2)
+
 PATH
   remote: vendor/extensions
   specs:
@@ -87,7 +94,6 @@ GEM
       activerecord (>= 4.0.0, < 7.0)
     babosa (1.0.3)
     bcrypt (3.1.13)
-    bcrypt (3.1.13-java)
     bindex (0.8.1)
     bootstrap (4.0.0)
       autoprefixer-rails (>= 6.0.3)
@@ -146,9 +152,6 @@ GEM
     excon (0.73.0)
     execjs (2.7.0)
     ffi (1.12.2)
-    ffi (1.12.2-java)
-    ffi (1.12.2-x64-mingw32)
-    ffi (1.12.2-x86-mingw32)
     fog-aws (3.6.2)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -209,23 +212,13 @@ GEM
     minitest (5.14.0)
     multi_json (1.14.1)
     mysql2 (0.5.3)
-    mysql2 (0.5.3-x64-mingw32)
-    mysql2 (0.5.3-x86-mingw32)
-    mysql2 (0.5.3-x86-mswin32-60)
     nio4r (2.5.2)
-    nio4r (2.5.2-java)
     nokogiri (1.10.9)
-      mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.9-java)
-    nokogiri (1.10.9-x64-mingw32)
-      mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.9-x86-mingw32)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     popper_js (1.16.0)
     public_suffix (4.0.4)
     puma (3.12.4)
-    puma (3.12.4-java)
     rack (2.2.2)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
@@ -377,7 +370,6 @@ GEM
     stringex (2.5.2)
     thor (1.0.1)
     thread_safe (0.3.6)
-    thread_safe (0.3.6-java)
     tilt (2.0.10)
     truncate_html (0.9.3)
     turbolinks (5.2.1)
@@ -385,8 +377,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2019.3)
-      tzinfo (>= 1.0.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     warden (1.2.8)
@@ -398,8 +388,6 @@ GEM
       railties (>= 5.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
-    websocket-driver (0.6.5-java)
-      websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
     will_paginate (3.3.0)
     xpath (3.2.0)
@@ -407,11 +395,7 @@ GEM
     zilch-authorisation (0.0.1)
 
 PLATFORMS
-  java
   ruby
-  x64-mingw32
-  x86-mingw32
-  x86-mswin32
 
 DEPENDENCIES
   RedCloth
@@ -431,6 +415,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rack-cors
   rails (~> 5.1.7)
+  rails-observers!
   refinerycms (~> 4.0)
   refinerycms-acts-as-indexed (~> 3.0, >= 3.0.0)
   refinerycms-athletes!
