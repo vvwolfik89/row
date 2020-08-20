@@ -15,8 +15,8 @@
   </div>
   <%= f.input :rowing_type, collection: build_enum_collection(Refinery::Athletes::Athlete.rowing_types, 'rowing_types'), include_blank: false -%>
   <%= f.input :gender, collection: build_enum_collection(Refinery::Athletes::Athlete.genders, 'genders'), include_blank: false -%>
-  <%= f.association :first_coach, collection: Refinery::Coaches::Coach.all.map {|coach| [coach.full_name, coach.id]}, include_blank: false -%>
-  <%= f.association :current_coach, collection: Refinery::Coaches::Coach.all.map {|coach| [coach.full_name, coach.id]}, include_blank: false -%>
+  <%= f.association :first_coach, collection: Refinery::Coaches::Coach.all.map {|coach| [coach.full_name, coach.id]}, include_blank: false, :input_html => {:maxlength => 50, :style => 'width: 500px'}, prompt: "Choose a Company" -%>
+  <%= f.association :current_coach, collection: Refinery::Coaches::Coach.all.map {|coach| [coach.full_name, coach.id]}, include_blank: false, :input_html => {:maxlength => 50, :style => 'width: 500px'}, prompt: "Choose a Company" -%>
   <%= f.input :territorial_unit -%>
   <%= f.input :educational_institution -%>
   <%= f.input :organisation -%>

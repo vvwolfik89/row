@@ -10,7 +10,7 @@ module Refinery
       enum employee_type: %i(head deputy_head management_staff head_of_department employee)
       enum type_education: %i(secondary_education secondary_special_education higher_education)
 
-      validates :first_name, :presence => true, :uniqueness => true
+      validates :first_name, :last_name, :patronymic, :presence => true
 
       belongs_to :icon, :class_name => '::Refinery::Image'
 

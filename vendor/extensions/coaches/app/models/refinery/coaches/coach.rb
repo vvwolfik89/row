@@ -10,7 +10,7 @@ module Refinery
 
       translates :first_name, :last_name, :patronymic, :description, :position
 
-      validates :first_name, :presence => true, :uniqueness => true
+      validates :first_name, :last_name, :patronymic, :presence => true
 
       belongs_to :icon, :class_name => '::Refinery::Image'
 
