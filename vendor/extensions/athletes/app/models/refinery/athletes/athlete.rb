@@ -12,7 +12,7 @@ module Refinery
 
       translates :first_name, :last_name, :patronymic, :territorial_unit, :educational_institution, :organisation, :first_organisation
 
-      validates :first_name, :presence => true
+      validates :first_name, :last_name, :patronymic, :presence => true
 
       belongs_to :icon, :class_name => '::Refinery::Image'
 
@@ -27,8 +27,8 @@ module Refinery
       scope :with_filter, -> (options = {}) {
         with_rowing_type(options[:rowing_type]).
           with_gender(options[:gender]).
-          search(options[:keyword])
-        # active
+          search(options[:keyword]).
+          active
       }
 
       scope :search, -> (keyword) {
@@ -38,7 +38,7 @@ module Refinery
       scope :with_gender, -> (gender) {where(gender: gender) if gender.present?}
       scope :with_rowing_type, -> (rowing_type) {where(rowing_type: rowing_type) if rowing_type.present?}
 
-      # scope :active, -> {where(is_active: true)}
+      scope :active, -> {where(is_active: true)}
     end
   end
 end
