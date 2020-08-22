@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200730131941) do
+ActiveRecord::Schema.define(version: 20200820193125) do
 
   create_table "athletes_current_coach", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.bigint "refinery_coach_id", null: false
@@ -137,6 +137,33 @@ ActiveRecord::Schema.define(version: 20200730131941) do
     t.datetime "updated_at", null: false
     t.integer "type_of_staff"
     t.boolean "is_active", default: false
+  end
+
+  create_table "refinery_competition_translations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "refinery_competition_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.text "description"
+    t.string "country"
+    t.string "city"
+    t.index ["locale"], name: "index_refinery_competition_translations_on_locale"
+    t.index ["refinery_competition_id"], name: "index_be55ee4083c86807bf29e7cc9b74170c9388d2f1"
+  end
+
+  create_table "refinery_competitions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "image_id"
+    t.integer "type_of_competition"
+    t.integer "location"
+    t.date "date_of_competition"
+    t.string "country"
+    t.string "city"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_department_translations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

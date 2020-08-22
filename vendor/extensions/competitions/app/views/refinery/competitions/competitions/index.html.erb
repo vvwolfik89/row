@@ -1,0 +1,37 @@
+<%# content_for :body do %>
+<!--  <ul id="competitions">-->
+<%# @competitions.each do |competition| %>
+<!--      <li>-->
+<%#= link_to competition.title, refinery.competitions_competition_path(competition) %>
+<!--      </li>-->
+<%# end %>
+<!--  </ul>-->
+<%# end %>
+
+<%#= render '/refinery/content_page' %>
+
+<div class="container" style="padding-top: 2%; padding-bottom: 2%">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="blog_left_sidebar">
+        <% @competitions.each do |competition| %>
+          <article class="row blog_item">
+            <div class="col-md-9">
+              <div class="blog_post">
+                <%= image_fu competition.image, nil, class: "card-img rounded-0", style: "height: auto" %>
+                <div class="blog_details">
+                  <a href="employees/<%= competition.id %>">
+                    <h2><%= competition.title %></h2>
+                  </a>
+                  <%#= item.content.html_safe %>
+                  <a class="button button-blog" href="competitions/<%= competition.id %>"><%= t('view_more') %></a>
+                </div>
+              </div>
+            </div>
+          </article>
+        <% end %>
+      </div>
+    </div>
+    <%= render "rigth_menu", items: @items %>
+  </div>
+</div>

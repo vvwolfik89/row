@@ -1,0 +1,34 @@
+en:
+  refinery:
+    plugins:
+      competitions:
+        title: Competitions
+    competitions:
+      admin:
+        competitions:
+          actions:
+            create_new: Add New Competition
+            reorder: Reorder Competitions
+            reorder_done: Done Reordering Competitions
+          records:
+            title: Competitions
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Competitions yet. Click "Add New Competition" to add your first competition.
+          competition:
+            view_live_html: View this competition live <br/><em>(opens in a new window)</em>
+            edit: Edit this competition
+            delete: Remove this competition forever
+      competitions:
+        show:
+          other: Other Competitions
+  activerecord:
+    attributes:
+      'refinery/competitions/competition':
+        title: Title
+        description: Description
+        image: Image
+        type_of_competition: Type Of Competition
+        location: Location
+        date_of_competition: Date Of Competition
+        country: Country
+        city: City

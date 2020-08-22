@@ -1,0 +1,30 @@
+<div class="col-lg-4">
+  <div class="blog_right_sidebar">
+    <%= form_tag("/competitions", class: "form-horizontal", method: :get) do %>
+      <aside class="single_sidebar_widget search_widget">
+        <div class="form-group">
+          <div class="input-group">
+            <%= text_field_tag("keyword", params[:keyword], class: "form-control", placeholder: t('search')) %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <%= select_tag("location", options_for_select(Refinery::Competitions::Competition.locations.map {|key, _| [t("location.#{key}"), key]}, params[:location]), class: "form-control", prompt: t('all_employees')) %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <%= select_tag("type_of_competition", options_for_select(Refinery::Competitions::Competition.type_of_competitions.map {|key, _| [t("type_of_competitions.#{key}"), key]}, params[:type_of_competition]), class: "form-control", prompt: t('all_employees')) %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-4">
+            <div class="controls">
+              <%= submit_tag(t('search'), class: "btn btn-info btn-block") %>
+            </div>
+          </div>
+        </div>
+      </aside>
+    <% end %>
+  </div>
+</div>

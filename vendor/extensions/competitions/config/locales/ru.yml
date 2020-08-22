@@ -1,0 +1,42 @@
+ru:
+  refinery:
+    plugins:
+      competitions:
+        title: Соревнования
+    competitions:
+      admin:
+        competitions:
+          actions:
+            create_new: Добавить Соревнование
+            reorder: Изменить порядок Соревнований
+            reorder_done: Закончить изменять порядок Соревнований
+          records:
+            title: Соревнования
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Соревнований" не найдено. Нажмите "Добавить Соревнование" чтобы создать Соревнование.
+          competition:
+            view_live_html: Просмотреть Соревнование вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать Соревнование
+            delete: Удалить Соревнование навсегда
+      competitions:
+        show:
+          other: Другие Соревнования
+  activerecord:
+    attributes:
+      'refinery/competitions/competition':
+        title: Наименование
+        description: Описание
+        image: Image
+        type_of_competition: Тип Соревнований
+        location: Расположение
+        date_of_competition: Дата
+        country: Страна
+        city: Город
+  location:
+    local: Местные соревнования
+    republic: Республиканские соревнования
+    world: Мировые соревнования
+  type_of_competitions:
+    olympic: Олимпиада
+    championship: Чемпионат
+

@@ -14,6 +14,9 @@ PATH
     refinerycms-coaches (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
+    refinerycms-competitions (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.3)
     refinerycms-departments (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 4.0.3)
@@ -459,6 +462,7 @@ DEPENDENCIES
   refinerycms-authentication-devise (~> 2.0)
   refinerycms-bootstrap
   refinerycms-coaches!
+  refinerycms-competitions!
   refinerycms-departments!
   refinerycms-employees!
   refinerycms-i18n

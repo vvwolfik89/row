@@ -1,0 +1,141 @@
+<% content_for :body_content_title do %>
+  <%= @competition.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%= raw @competition.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%= raw @competition.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%= image_fu @competition.image, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Type Of Competition</h1>
+    <p>
+      <%= raw @competition.type_of_competition %>
+    </p>
+  </section>
+  <section>
+    <h1>Location</h1>
+    <p>
+      <%= raw @competition.location %>
+    </p>
+  </section>
+  <section>
+    <h1>Date Of Competition</h1>
+    <p>
+      <%= raw @competition.date_of_competition %>
+    </p>
+  </section>
+  <section>
+    <h1>Country</h1>
+    <p>
+      <%= raw @competition.country %>
+    </p>
+  </section>
+  <section>
+    <h1>City</h1>
+    <p>
+      <%= raw @competition.city %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="competitions">
+      <% @competitions.each do |competition| %>
+        <li>
+          <%= link_to competition.title, refinery.competitions_competition_path(competition) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+
+<section class="blog_area single-post-area section-margin">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 posts-list">
+        <div class="single-post row">
+          <div class="col-lg-12">
+            <div class="feature-img">
+              <%= image_fu @competition.image, nil, class: "card-img rounded-0", style: "height: auto" %>
+              <!--              <img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">-->
+            </div>
+          </div>
+          <div class="col-lg-3  col-md-3">
+            <div class="blog_info text-right">
+              <div class="post_tag">
+                <!--                <a class="active" href="/items?utf8=✓&type_news=<%#= @item.type_news %>"><%#= t("type_news.#{@item.type_news}") %></a>-->
+              </div>
+              <!--              <ul class="blog_meta list">-->
+              <!--                <li>-->
+              <!--                  <a href="#">Mark wiens-->
+              <!--                    <i class="lnr lnr-user"></i>-->
+              <!--                  </a>-->
+              <!--                </li>-->
+              <!--                <li>-->
+              <!--                  <a href="#">12 Dec, 2017-->
+              <!--                    <i class="lnr lnr-calendar-full"></i>-->
+              <!--                  </a>-->
+              <!--                </li>-->
+              <!--                <li>-->
+              <!--                  <a href="#">1.2M Views-->
+              <!--                    <i class="lnr lnr-eye"></i>-->
+              <!--                  </a>-->
+              <!--                </li>-->
+              <!--                <li>-->
+              <!--                  <a href="#">06 Comments-->
+              <!--                    <i class="lnr lnr-bubble"></i>-->
+              <!--                  </a>-->
+              <!--                </li>-->
+              <!--              </ul>-->
+              <!--              <ul class="social-links">-->
+              <!--                <li>-->
+              <!--                  <a href="#">-->
+              <!--                    <i class="fab fa-facebook-f"></i>-->
+              <!--                  </a>-->
+              <!--                </li>-->
+              <!--                <li>-->
+              <!--                  <a href="#">-->
+              <!--                    <i class="fab fa-twitter"></i>-->
+              <!--                  </a>-->
+              <!--                </li>-->
+              <!--                <li>-->
+              <!--                  <a href="#">-->
+              <!--                    <i class="fab fa-github"></i>-->
+              <!--                  </a>-->
+              <!--                </li>-->
+              <!--                <li>-->
+              <!--                  <a href="#">-->
+              <!--                    <i class="fab fa-behance"></i>-->
+              <!--                  </a>-->
+              <!--                </li>-->
+              <!--              </ul>-->
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-9 blog_details">
+            <h2><%= @competition.title %></h2>
+            <%= @competition.description.html_safe %>
+          </div>
+        </div>
+      </div>
+      <%#= render "rigth_menu", items: Refinery::Items::Item.take(4) %>
+    </div>
+  </div>
+</section>
