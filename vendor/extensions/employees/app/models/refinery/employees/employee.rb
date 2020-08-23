@@ -29,7 +29,7 @@ module Refinery
       }
 
       scope :search, -> (keyword) {
-        joins('JOIN refinery_employee_translations ON refinery_employee_translations.refinery_employee_id = refinery_employees.id').where('LOWER(refinery_employee_translations.first_name) ilike :key OR refinery_employee_translations.last_name ilike :key OR refinery_employee_translations.patronymic ilike :key', key: "%#{keyword.downcase}%") if keyword.present?
+        joins('JOIN refinery_employee_translations ON refinery_employee_translations.refinery_employee_id = refinery_employees.id').where('LOWER(refinery_employee_translations.first_name) like :key OR refinery_employee_translations.last_name like :key OR refinery_employee_translations.patronymic like :key', key: "%#{keyword.downcase}%") if keyword.present?
       }
 
       scope :active, -> {where(is_active: true)}

@@ -17,7 +17,7 @@ module Refinery
       scope :with_type_of_competition, -> (type_of_competition) {where(type_of_competition: type_of_competition) if type_of_competition.present?}
 
       scope :search, -> (keyword) {
-        joins('JOIN refinery_competition_translations ON refinery_competition_translations.refinery_competition_id = refinery_competitions.id').where('LOWER(refinery_competition_translations.title) ilike :key', key: "%#{keyword.downcase}%") if keyword.present?
+        joins('JOIN refinery_competition_translations ON refinery_competition_translations.refinery_competition_id = refinery_competitions.id').where('LOWER(refinery_competition_translations.title) like :key OR refinery_competition_translations.city like :key OR refinery_competition_translations.country like :key', key: "%#{keyword.downcase}%") if keyword.present?
       }
 
       scope :with_filter, -> (options = {}) {

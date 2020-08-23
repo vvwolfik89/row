@@ -32,7 +32,7 @@ module Refinery
       }
 
       scope :search, -> (keyword) {
-        joins('JOIN refinery_athletes_translations ON refinery_athletes_translations.refinery_athlete_id = refinery_athletes.id').where('LOWER(refinery_athletes_translations.first_name) ilike :key OR refinery_athletes_translations.last_name ilike :key OR refinery_athletes_translations.patronymic ilike :key', key: "%#{keyword.downcase}%") if keyword.present?
+        joins('JOIN refinery_athletes_translations ON refinery_athletes_translations.refinery_athlete_id = refinery_athletes.id').where('LOWER(refinery_athletes_translations.first_name) like :key OR refinery_athletes_translations.last_name like :key OR refinery_athletes_translations.patronymic like :key', key: "%#{keyword.downcase}%") if keyword.present?
       }
 
       scope :with_gender, -> (gender) {where(gender: gender) if gender.present?}
