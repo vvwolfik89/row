@@ -1,0 +1,54 @@
+<%= custom_form_for([refinery, :competitions_admin, @competition], bootstrap3_form_options) do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+             :object => @competition,
+             :include_object_name => true %>
+
+  <%= render '/refinery/admin/locale_picker',
+             :current_locale => Globalize.locale %>
+
+  <%= f.input :title -%>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+               :f => f,
+               :fields => [:description],
+               :object => "competitions/competition" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :image_id,
+               :image => @competition.image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <%= f.input :type_of_competition, collection: build_enum_collection(Refinery::Competitions::Competition.type_of_competitions, 'type_of_competitions'), include_blank: false -%>
+
+  <%= f.input :location, collection: build_enum_collection(Refinery::Competitions::Competition.locations, 'location'), include_blank: false -%>
+
+  <div class='form-group'>
+    <%= f.label :date_of_competition, class: 'col-sm-3' -%>
+    <div class="col-sm-9">
+      <%= f.date_select :date_of_competition, start_year: 2019 -%>
+    </div>
+  </div>
+
+  <%= f.input :country -%>
+  <%= f.input :city -%>
+
+  <%= render '/refinery/admin/form_actions', f: f,
+             continue_editing: false,
+             delete_title: t('delete', scope: 'refinery.competitions.admin.competitions.competition'),
+             delete_confirmation: t('message', scope: 'refinery.admin.delete', title: @competition.title),
+             cancel_url: refinery.competitions_admin_competitions_path -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+      $(document).ready(function () {
+          page_options.init(false, '', '');
+      });
+  </script>
+<% end -%>

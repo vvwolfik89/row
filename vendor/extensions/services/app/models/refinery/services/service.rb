@@ -21,7 +21,7 @@ module Refinery
       }
 
       scope :search, -> (keyword) {
-        joins('JOIN refinery_service_translations ON refinery_service_translations.refinery_service_id = refinery_services.id').where('LOWER(refinery_service_translations.title) ilike :key', key: "%#{keyword.downcase}%") if keyword.present?
+        joins('JOIN refinery_service_translations ON refinery_service_translations.refinery_service_id = refinery_services.id').where('LOWER(refinery_service_translations.title) like :key', key: "%#{keyword.downcase}%") if keyword.present?
       }
 
       scope :with_kind, -> (kind) {where(kind: kind) if kind.present?}

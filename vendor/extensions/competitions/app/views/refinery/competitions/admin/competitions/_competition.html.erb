@@ -1,0 +1,31 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(competition) -%>">
+  <span class='title'>
+    <%= translated_field(competition, :title) %>
+  </span>
+
+  <% if Refinery::I18n.frontend_locales.many? %>
+    <span class='locales'>
+      <% competition.translations.sort_by {|t| Refinery::I18n.frontend_locales.index(t.locale)}.each do |translation| %>
+        <% if translation.title.present? %>
+          <%= link_to refinery.edit_competitions_admin_competition_path(competition, :switch_locale => translation.locale),
+                      class: 'locale', title: translation.locale.upcase do %>
+
+            <div class="<%= translation.locale %> locale_marker">
+              <%= locale_text_icon(translation.locale.upcase) %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </span>
+  <% end %>
+
+  <span class='preview'></span>
+
+  <span class='actions'>
+    <%= action_icon(:preview, refinery.competitions_competition_path(competition), t('.view_live_html')) %>
+    <%= action_icon(:edit, refinery.edit_competitions_admin_competition_path(competition), t('.edit')) %>
+    <%= action_icon(:delete, refinery.competitions_admin_competition_path(competition), t('.delete'),
+                    {class: "cancel confirm-delete",
+                     data: {confirm: t('message', scope: 'refinery.admin.delete', title: competition.title)}}) %>
+  </span>
+</li>
