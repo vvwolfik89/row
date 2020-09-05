@@ -1,5 +1,4 @@
 class ResultsController < ApplicationController
-  load_and_authorize_resource
 
   def create
     respond_to do |format|
