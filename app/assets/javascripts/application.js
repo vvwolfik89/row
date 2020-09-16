@@ -20,4 +20,9 @@
 //= require modal_carousel
 //= require cocoon
 //= require cocoon_limit_relation
+//= require owl-carousel/owl.carousel.min
+//= require Magnific-Popup/jquery.magnific-popup.min
+//= require js/jquery.ajaxchimp.min
+//= require js/mail-script.js
+//= require js/main.js
 //= require_tree .

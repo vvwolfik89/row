@@ -92,7 +92,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     ansi (1.5.0)
     arel (8.0.0)
-    autoprefixer-rails (9.7.6)
+    autoprefixer-rails (8.6.5)
       execjs
     awesome_nested_set (3.2.0)
       activerecord (>= 4.0.0, < 7.0)
@@ -435,6 +435,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   active_link_to
+  autoprefixer-rails (< 9.0)
   bootstrap (~> 4.0.0)
   bootstrap-datepicker-rails
   byebug
@@ -456,6 +457,7 @@ DEPENDENCIES
   rails (~> 5.1.7)
   rails-controller-testing
   rails-observers!
+  rake (= 13.0.1)
   refinerycms (~> 4.0)
   refinerycms-acts-as-indexed (~> 3.0, >= 3.0.0)
   refinerycms-athletes!
