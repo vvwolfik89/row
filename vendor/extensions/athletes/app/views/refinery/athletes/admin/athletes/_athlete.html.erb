@@ -1,6 +1,7 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(athlete) -%>">
   <span class='title'>
     <%= translated_field(athlete, :first_name) %>
+    <%= translated_field(athlete, :last_name) %>
   </span>
 
   <% if Refinery::I18n.frontend_locales.many? %>

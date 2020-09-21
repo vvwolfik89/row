@@ -24,6 +24,7 @@
 @import "owl-carousel/owl.carousel.min.css";
 @import "Magnific-Popup/magnific-popup.css";
 @import "stylesheets/style.css";
+@import "pagination.css.scss";
 
 body {
   background: #DDD;
@@ -154,19 +155,19 @@ body {
 }
 
 .blog_right_sidebar .widget_title {
-  background: #151ade !important;
+  background: rgb(20, 37, 61) !important;
 }
 
 .blog_right_sidebar .search_widget .input-group .form-control {
-  background: #151ade !important;
+  background: rgb(20, 37, 61) !important;
 }
 
 .button {
-  background: #151ade !important;
+  background: rgb(20, 37, 61) !important;
 }
 
 .button:hover {
-  background: green !important;
+  background: #1d4080 !important;
 }
 
 .card-subject__imgOverlay {

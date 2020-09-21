@@ -50,4 +50,10 @@ module ApplicationHelper
       presenter.list_tag_css = 'link_tag_css1'
     end
   end
+
+  def will_paginate(objects, options = {})
+    # options.reverse_merge!(theme: 'twitter-bootstrap-3')
+
+    super(objects, options)
+  end
 end
