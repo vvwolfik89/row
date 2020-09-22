@@ -24,7 +24,7 @@ gem 'autoprefixer-rails', '< 9.0'
 
 
 # UI Gems
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 # gem 'bootstrap-sass'
