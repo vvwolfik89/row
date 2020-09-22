@@ -1884,7 +1884,7 @@ h3, .h3 {
 }
 
 .blog_details h2:hover {
-    color: #de6320
+    color: #14197b
 }
 
 .blog_details p {
@@ -1902,8 +1902,8 @@ h3, .h3 {
 }
 
 .blog_right_sidebar {
-    border: 1px solid #eeeeee;
-    background: #fafaff;
+    /*border: 1px solid #eeeeee;*/
+    /*background: #fafaff;*/
     padding: 30px
 }
 

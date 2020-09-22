@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let date = new Date(Date.now() + 86400e3);
+    let date = new Date(Date.now() + 86400);
     date = date.toUTCString();
     // setCookie.onclick = function (event) {
     //     document.cookie = "popup=true; expires=" + date;
@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.cookie = "popup=true; expires=" + date;
                 bg_popup.style.display = "none";
             },
-            12000
+            9000
         );
     }
-    // bg_popup.style.display = "flex";
 });

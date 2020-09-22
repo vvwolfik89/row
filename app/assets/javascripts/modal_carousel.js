@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Activate Carousel with a specified interval
-    $("#myCarousel").carousel({interval: 4000});
+    $("#myCarousel").carousel({interval: 3000});
 
     // Enable Carousel Indicators
     $(".item1").click(function () {

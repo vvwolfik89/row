@@ -1,6 +1,6 @@
 module MainHelper
   def build_employees_collection
-    Refinery::Employees::Employee.take(4)
+    Refinery::Employees::Employee.order("RAND()").limit(4)
   end
 
   def build_news_collection
