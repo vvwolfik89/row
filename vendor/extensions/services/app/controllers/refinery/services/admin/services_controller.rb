@@ -11,7 +11,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def service_params
-          params.require(:service).permit(:title, :kind, :icon_id, :description, :short_name, :coast, :show_inline, :is_active)
+          params.require(:service).permit(:title, :kind, :icon_id, :description, :short_name, :coast, :show_inline, :is_active, :coast_value)
         end
       end
     end

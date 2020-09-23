@@ -1,15 +1,21 @@
 <div class="row service_row">
-  <div class="col-lg-3 service_image">
-    <%= image_fu @service.icon, nil, class: "card-img rounded-0" %>
+  <h1 class="services_h1"><%= raw @service.title %> - <%= raw @service.coast %> <%= raw @service.coast_value %></h1>
+  <div class="service_block">
+    <p>
+      <%= image_fu @service.icon, nil, class: "leftimg" %><%= raw @service.description %>
+    </p>
   </div>
-  <div class="col-lg-3 service_title">
-    <h2><%= raw @service.title %></h2>
-  </div>
-  <div class="col-lg-3 service_description">
-    <h3><%= raw @service.description %></h3>
-  </div>
-  <div class="col-lg-3 service_coast">
-    <h4><%= raw @service.coast %> <%= t('coast') %></h4>
-  </div>
+  <!--  <div class="col-lg-3 service_image">-->
+  <%#= image_fu @service.icon, nil, class: "card-img rounded-0" %>
+  <!--  </div>-->
+  <!--  <div class="col-lg-3 service_title">-->
+  <!--    <h2><%#= raw @service.title %></h2>-->
+  <!--  </div>-->
+  <!--  <div class="col-lg-3 service_description">-->
+  <!--    <h3><%#= raw @service.description %></h3>-->
+  <!--  </div>-->
+  <!--  <div class="col-lg-3 service_coast">-->
+  <!--    <h4><%#= raw @service.coast %> <%#= t('coast') %></h4>-->
+  <!--  </div>-->
 </div>
 

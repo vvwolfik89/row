@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200820193125) do
+ActiveRecord::Schema.define(version: 20200923211410) do
 
   create_table "athletes_current_coach", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.bigint "refinery_coach_id", null: false
@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(version: 20200820193125) do
     t.datetime "updated_at", null: false
     t.integer "type_of_staff"
     t.boolean "is_active", default: false
+    t.boolean "national_coach", default: true
   end
 
   create_table "refinery_competition_translations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -465,6 +466,7 @@ ActiveRecord::Schema.define(version: 20200820193125) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "coast_value"
   end
 
   create_table "refinery_sport_rowing_translations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

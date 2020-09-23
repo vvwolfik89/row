@@ -35,3 +35,5 @@ en:
   kinds:
     transport: Transport's Services
     center: Centrer's Services
+    medical_center: Medical Centrer's Services
+    led_table: Led Table Services

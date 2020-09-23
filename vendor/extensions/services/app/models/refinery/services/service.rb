@@ -3,7 +3,7 @@ module Refinery
     class Service < Refinery::Core::BaseModel
       self.table_name = 'refinery_services'
 
-      enum kind: %i(transport center)
+      enum kind: %i(transport center medical_center led_table)
 
       translates :title, :description, :coast
 

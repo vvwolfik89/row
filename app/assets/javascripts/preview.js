@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let date = new Date(Date.now() + 86400);
+    let date = new Date(Date.now() + 86400e3);
     date = date.toUTCString();
     // setCookie.onclick = function (event) {
     //     document.cookie = "popup=true; expires=" + date;

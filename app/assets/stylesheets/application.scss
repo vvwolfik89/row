@@ -133,11 +133,11 @@ body {
 .row .service_image img {
   height: 300px;
   width: 300px;
-  border-radius: 150rem !important;
+  //border-radius: 150rem !important;
 }
 
 .service_row {
-  height: 400px;
+  height: auto;
 }
 
 .row .service_image {
@@ -172,4 +172,29 @@ body {
 
 .card-subject__imgOverlay {
   background: rgba(22, 40, 255, 0.51) !important;
+}
+
+.leftimg {
+  width: 35%;
+  height: auto;
+  float: left; /* Выравнивание по левому краю */
+  margin: 10px 10px 10px 0; /* Отступы вокруг картинки */
+}
+
+.services_h1 {
+  color: black;
+  font-family: inherit;
+  width: 100%;
+  text-align: center;
+}
+
+.service_block {
+  font-family: inherit;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.card_static_data {
+  min-height: 230px;
 }

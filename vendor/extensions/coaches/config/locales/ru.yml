@@ -33,6 +33,7 @@ ru:
         description: Описание
         position: Должность
         type_of_staff: Тип
+        national_coach: Входит в тренерский состав национальных команд
   rowing_types:
     academic_rowing: Академическая Гребля
     kayaking_canoeing: Гребля на байдарках и каноэ
