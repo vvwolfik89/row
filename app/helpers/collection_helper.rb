@@ -10,7 +10,7 @@ module CollectionHelper
   def build_services_collection
     collection = Refinery::Services::Service.active.with_inline
     collection.map do |service|
-      name = "#{service.title} - #{service.coast} " + t('coast') + "!!!"
+      name = "#{service.title} - #{service.coast} #{service.coast_value}" + "!!!"
       link_to(name, "/services/#{service.id}", style: 'color: red; font-size: 16px; font-weight: 600')
     end.join('    ')
   end

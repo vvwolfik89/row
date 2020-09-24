@@ -8,7 +8,7 @@
     <div class="row">
       <% build_employees_collection.each do |employee| %>
         <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
-          <div class="card card-team">
+          <div class="card card-team" style="min-height: 250px">
             <%= image_fu employee.icon, nil, class: "card-img rounded-0", style: "height: auto" %>
             <div class="card-team__body text-center">
               <h3>

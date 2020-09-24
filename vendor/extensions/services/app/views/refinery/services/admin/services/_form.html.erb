@@ -12,6 +12,8 @@
   <%= f.input :show_inline %>
   <%= f.input :is_active %>
   <%= f.input :kind, collection: Refinery::Services::Service.kinds.map {|key, _| [t("kinds.#{key}"), key]}, include_blank: false -%>
+  <%= f.input :coast_value %>
+
 
   <div class='field'>
     <%= f.label :icon -%>

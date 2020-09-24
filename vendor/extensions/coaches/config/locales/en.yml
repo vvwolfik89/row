@@ -32,6 +32,7 @@ en:
         icon: Icon
         description: Description
         position: Position
+        national_coach: National Staff
   rowing_types:
     academic_rowing: Academic Rowing
     kayaking_canoeing: Kayaking and Canoeing

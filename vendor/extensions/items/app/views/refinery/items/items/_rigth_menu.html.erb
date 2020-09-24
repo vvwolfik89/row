@@ -43,7 +43,7 @@
       <h3 class="widget_title"><%= t('top_news') %></h3>
       <% items.take(4).each do |item| %>
         <div class="media post_item">
-          <%= image_fu item.icon, nil, class: "card-img rounded-0", style: "width: 100px; height: 60px" %>
+          <%= image_fu item.icon, nil, class: "card-img rounded-0", style: "width: auto; height: 100px" %>
           <div class="media-body">
             <a href="items/<%= item.id %>">
               <h3><%= item.title %></h3>

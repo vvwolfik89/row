@@ -29,9 +29,11 @@ ru:
         icon: Icon
         description: Описание
         short_name: Short Name
-        coast: Стоимоть(руб)
+        coast: Стоимоcть(руб)
         show_inline: Показывать в бегущей строке
         is_active: Активная
   kinds:
     transport: Транспортные услуги
     center: Услуги Акватории Канала
+    medical_center: Услуги Медико-восстановительного Центра
+    led_table: Услуги LED экрана

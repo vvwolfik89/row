@@ -16,6 +16,10 @@ module MainHelper
     data[type]
   end
 
+  def grouped_national_coaches
+    Refinery::Coaches::Coach.where(national_coach: true).count
+  end
+
   def parthers_collection
     Refinery::Partners::Partner.active
   end
