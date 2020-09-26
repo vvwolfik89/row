@@ -1,24 +1,17 @@
 <div id="bg_popup">
   <div id="popup">
-    <!--    <a id="setCookie" class="close" href="#" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none'; return false;"></a>-->
     <div class="container ">
-
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!--        <ul class="carousel-indicators">-->
-        <!--          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
-        <!--          <li data-target="#myCarousel" data-slide-to="1"></li>-->
-        <!--          <li data-target="#myCarousel" data-slide-to="2"></li>-->
-        <!--        </ul>-->
         <div class="carousel-inner">
           <% build_preview_collection.each_with_index do |preview, index| %>
             <div class="carousel-item <%= 'active' if index == 0 %>">
-              <div class="block1">
+              <div class="block_current_preview">
                 <%= image_fu preview.icon, nil, class: "card-img rounded-0" %>
-              </div>
-              <div class="block2">
-                <h2><%= preview.title %></h2>
-                <span class="testimonial__icon"><i class="ti-quote-right"></i></span>
+                <div class="block_description_preview">
+                  <h2><%= preview.title %></h2>
+                  <span class="testimonial__icon"><i class="ti-quote-right"></i></span>
                 </div>
+              </div>
             </div>
           <% end %>
         </div>
@@ -30,9 +23,5 @@
         </a>
       </div>
     </div>
-    <div>
-
-    </div>
   </div>
-
 </div>

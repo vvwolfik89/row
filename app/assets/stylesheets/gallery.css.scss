@@ -1,5 +1,5 @@
 .row > .column {
-  padding: 0 8px;
+  padding: 125px 10px;
 }
 
 .row:after {
@@ -10,8 +10,20 @@
 
 /* Create four equal columns that floats next to eachother */
 .column {
+  width: 250px;
   float: left;
-  width: 25%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  //width: 25%;
+}
+
+.column img {
+  width: 100%;
+}
+
+.row_gallery {
+  padding-left: 20px;
+  margin: 20px;
 }
 
 /* The Modal (background) */
