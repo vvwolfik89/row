@@ -39,6 +39,6 @@ ru:
     kayaking_canoeing: Гребля на байдарках и каноэ
   type_of_staffs:
     coach: Тренер
-    doctor: Доктор
-    masseur: Массажист
+    doctor: Тренер-врач
+    masseur: Тренер-массажист
     all: Весь персонал
