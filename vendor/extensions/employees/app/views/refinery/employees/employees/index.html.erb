@@ -6,7 +6,7 @@
           <article class="row blog_item">
             <div class="col-md-9">
               <div class="blog_post">
-                <%= image_fu employee.icon, nil, class: "card-img rounded-0", style: "height: auto" %>
+                <%= image_fu employee.icon, nil, class: "card-img rounded-0", style: "height: auto; max-height: 500px; width: auto" %>
                 <div class="blog_details">
                   <a href="employees/<%= employee.id %>">
                     <h2><%= employee.full_name %></h2>
@@ -19,7 +19,12 @@
           </article>
         <% end %>
       </div>
+      <nav aria-label="Page navigation example">
+        <div class="col-md-6 text-center">
+          <%= will_paginate @employees %>
+        </div>
+      </nav>
     </div>
-    <%= render "rigth_menu", items: @items %>
+    <%= render "rigth_menu", items: @employees %>
   </div>
 </div>
