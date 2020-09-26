@@ -15,6 +15,10 @@
       <dt class="info-card__value"><%= t("rowing_types.#{object.rowing_type}") %></dt>
       <dd class="info-card__key"><%= t('bday') %>:</dd>
       <dt class="info-card__value"><%= object.bday %></dt>
+      <% if object.try(:type_of_staff) %>
+        <dd class="info-card__key"><%= t('type_of_staff') %>:</dd>
+        <dt class="info-card__value"><%= t("type_of_staffs.#{object.type_of_staff}") %></dt>
+      <% end %>
       <% if object.try(:territorial_unit).present? %>
         <dd class="info-card__key"><%= t('teritorial_unit') %>:</dd>
         <dt class="info-card__value"><%= object.territorial_unit %></dt>
