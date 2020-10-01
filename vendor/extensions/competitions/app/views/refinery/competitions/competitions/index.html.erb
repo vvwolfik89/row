@@ -31,7 +31,12 @@
           </article>
         <% end %>
       </div>
+      <nav aria-label="Page navigation example">
+        <div class="col-md-6 text-center">
+          <%= will_paginate @competitions %>
+        </div>
+      </nav>
     </div>
-    <%= render "rigth_menu", items: @items %>
+    <%= render "rigth_menu", items: @competitions %>
   </div>
 </div>

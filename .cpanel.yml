@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-  - export REPOPATH=/home/rowby/repo_row/*
-  - export SITEPATH=/home/rowby/public_html_row/
-  - /bin/rsync -rav --exclude '.git' --exclude '.cpanel.yml' --del $REPOPATH $SITEPATH

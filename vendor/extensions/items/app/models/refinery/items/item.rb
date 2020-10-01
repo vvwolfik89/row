@@ -18,8 +18,7 @@ module Refinery
 
       scope :with_filter, -> (options = {}) {
         with_type(options[:type_news]).
-          search(options[:keyword]).
-          order(:title)
+          search(options[:keyword])
       }
 
       scope :with_type, -> (type) {where(type_news: type) if type.present?}

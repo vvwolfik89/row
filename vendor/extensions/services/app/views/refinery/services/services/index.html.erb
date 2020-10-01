@@ -30,6 +30,11 @@
           </article>
         <% end %>
       </div>
+      <nav aria-label="Page navigation example">
+        <div class="col-md-6 text-center">
+          <%= will_paginate @services %>
+        </div>
+      </nav>
     </div>
     <%= render "rigth_menu", items: @services %>
   </div>
