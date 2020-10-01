@@ -77,6 +77,11 @@
               </article>
             <% end %>
           </div>
+          <nav aria-label="Page navigation example">
+            <div class="col-md-6 text-center">
+              <%= will_paginate @items %>
+            </div>
+          </nav>
         </div>
 
         <%= render "rigth_menu", items: @items %>
