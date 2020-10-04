@@ -4,7 +4,7 @@ module MainHelper
   end
 
   def build_news_collection
-    Refinery::Items::Item.order('created_at DESC').take(4)
+    Refinery::Items::Item.order('created_at DESC').take(3)
   end
 
   def count_employees
