@@ -1,9 +1,9 @@
 <% if @page.album.present? %>
 
   <!-- Images used to open the lightbox -->
-  <div style="text-align:center">
+  <div class="photo_album_block">
     <h2><%= @page.album.title %></h2>
-    <div style="width: 100%">
+    <div class="photo_album_description">
       <%= raw @page.album.description %>
     </div>
     <p><%= t('photo_gallery.click') %></p>
