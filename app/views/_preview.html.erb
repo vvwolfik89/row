@@ -5,12 +5,15 @@
         <div class="carousel-inner">
           <% build_preview_collection.each_with_index do |preview, index| %>
             <div class="carousel-item <%= 'active' if index == 0 %>">
-              <div class="block_current_preview">
-                <%= image_fu preview.icon, nil, class: "card-img rounded-0" %>
-                <div class="block_description_preview">
-                  <h2><%= preview.title %></h2>
-                  <span class="testimonial__icon"><i class="ti-quote-right"></i></span>
-                </div>
+              <div class="preview_block">
+                <div><%= image_fu preview.icon, nil, class: "card-img rounded-0" %></div>
+                <h2><%= preview.title %></h2>
+                <%= preview.description.html_safe %>
+                <!--                <p class="block_current_preview_image"><%#= image_fu preview.icon, nil, class: "card-img rounded-0" %></p>-->
+                <!--                <div class="block_description_preview">-->
+                <!--                  <h2><%#= preview.title %></h2>-->
+                <!--                  <span class="testimonial__icon"><i class="ti-quote-right"></i></span>-->
+                <!--                </div>-->
               </div>
             </div>
           <% end %>

@@ -5,25 +5,27 @@
       <div class="col-md-6 col-xl-3 mb-3 mb-xl-0">
         <div class="card static__single card_static_data">
           <h3><%= count_employees %></h3>
-          <h4><%= t("employees.count") %></h4>
+          <a href="/employees" style="color: black"><h4><%= t("employees.count") %></h4></a>
         </div>
       </div>
       <div class="col-md-6 col-xl-3 mb-3 mb-xl-0">
         <div class="card static__single card_static_data">
           <h3><%= grouped_athletes("academic_rowing") %></h3>
-          <h4><%= t("athletes.academic_rowing") %></h4>
+          <a href="/athletes?utf8=✓&rowing_type=academic_rowing" style="color: black">
+            <h4><%= t("athletes.academic_rowing") %></h4></a>
         </div>
       </div>
       <div class="col-md-6 col-xl-3 mb-3 mb-xl-0">
         <div class="card static__single card_static_data">
           <h3><%= grouped_athletes("canoe_rowing") + grouped_athletes("kayaking_rowing") %></h3>
-          <h4><%= t("athletes.kayaking_and_canoeing") %></h4>
+          <a href="/athletes?utf8=✓&rowing_type=canoe_rowing" style="color: black">
+            <h4><%= t("athletes.kayaking_and_canoeing") %></h4></a>
         </div>
       </div>
       <div class="col-md-6 col-xl-3 mb-3 mb-xl-0">
         <div class="card static__single card_static_data">
           <h3><%= grouped_athletes("canoe_rowing") + grouped_athletes("kayaking_rowing") %></h3>
-          <h4><%= t("coaches.coaching_staff") %></h4>
+          <a href="/coaches" style="color: black"><h4><%= t("coaches.coaching_staff") %></h4></a>
         </div>
       </div>
     </div>

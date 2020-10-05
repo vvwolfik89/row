@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.cookie = "popup=true; expires=" + date;
                 bg_popup.style.display = "none";
             },
-            9000
+            12000
         );
     }
 });
