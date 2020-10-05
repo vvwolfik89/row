@@ -248,6 +248,10 @@
   float: left;
 }
 
+.block_current_preview_image {
+  text-align: center;
+}
+
 #bg_popup .container .block1 img {
   width: 100%;
   height: auto;
@@ -269,4 +273,25 @@
   //border-radius: .5rem !important;
   top: -110px;
   //left: 570px;
+}
+
+.preview_block {
+  width: 100%;
+  //height: auto;
+  max-height: 600px;
+  background: #edfffc;
+  background-size: cover;
+}
+
+.carousel-item .preview_block img {
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-right: 5px;
+  width: 35%;
+  height: auto;
+}
+
+.preview_block p {
+  font-size: 18px;
 }
