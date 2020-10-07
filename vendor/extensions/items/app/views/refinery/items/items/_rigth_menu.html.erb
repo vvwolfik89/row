@@ -59,7 +59,7 @@
       <ul class="list cat-list">
         <% Refinery::Items::Item.group(:type_news).count.each do |type, count| %>
           <li>
-            <a href="items?utf8=✓&type_news=<%= type %>" class="d-flex justify-content-between">
+            <a href="../items?utf8=✓&type_news=<%= type %>" class="d-flex justify-content-between">
               <p><%= t("type_news.#{type}") %></p>
               <p><%= count %></p>
             </a>

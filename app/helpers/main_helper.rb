@@ -21,6 +21,6 @@ module MainHelper
   end
 
   def parthers_collection
-    Refinery::Partners::Partner.active
+    Refinery::Partners::Partner.order(:position).active
   end
 end
