@@ -51,10 +51,10 @@ ru:
     head_of_department: Начальник отдела
     employee: Сотрудник
   employees:
-    title: Познакомьтесь с нашими сотрудниками
+    title: Познакомьтесь с нашими работниками
     description:
-    count: Сотрудников в РЦОП по гребным видам спорта г. Заславль
-    beginning_work_at: Работает с
+    count: Работников РЦОП по гребным видам спорта г. Заславль
+    beginning_work_at: В должности с
   photo_gallery:
     click: Нажмите на изображение
   news:
@@ -86,7 +86,7 @@ ru:
   search_posts: Искать новость
   coast: руб.
   type_sport: Вид спорта
-  bday: День Рождения
+  bday: День рождения
   teritorial_unit: Выступает за
   national_staff: Методический Персонал Национальных Команд
   type_of_staff: Должность

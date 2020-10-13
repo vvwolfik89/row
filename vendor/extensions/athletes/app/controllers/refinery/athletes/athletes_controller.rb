@@ -8,7 +8,7 @@ module Refinery
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @athlete in the line below:
-        @athletes = Refinery::Athletes::Athlete.with_filter(params).page(params[:page]).per_page(9)
+        @athletes = Refinery::Athletes::Athlete.includes(:icon).order(:position).with_filter(params).page(params[:page]).per_page(9)
         present(@page)
         respond_to do |format|
           format.html #index.html.erb

@@ -5,7 +5,7 @@ module Refinery
       self.table_name = 'refinery_employees'
 
 
-      translates :first_name, :last_name, :patronymic, :education, :description, :position
+      translates :first_name, :last_name, :patronymic, :education, :description, :pre_position
 
       enum employee_type: %i(head deputy_head management_staff head_of_department employee)
       enum type_education: %i(secondary_education secondary_special_education higher_education)

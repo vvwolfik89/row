@@ -33,7 +33,7 @@ ru:
         position: Position
         type_news: Тип Новости
   type_news:
-    birth_days: Дни Рождения
+    birth_days: Дни рождения
     world_news: Мировые Новости
     chanel_news: Новости Центра
   top_news: Популярные новости

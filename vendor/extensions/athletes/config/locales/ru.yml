@@ -27,7 +27,7 @@ ru:
         first_name: Имя
         last_name: Фамилия
         patronymic: Отчество
-        bday: День Рождения
+        bday: День рождения
         type_rowing: Вид гребли
         territorial_unit: Административно-территориальная единица за которую выступает спортсмен
         educational_institution: Учреждение в которую зачислен спортсмен
@@ -35,11 +35,11 @@ ru:
         first_organisation: Учреждение в которой проходил подготовку спортсмен на ранних этапах
   rowing_types:
     all: Все
-    academic_rowing: Академическая Гребля
+    academic_rowing: Гребля академическая
     kayaking_rowing: Гребля на байдарках
-    canoe_rowing: Каноэ
+    canoe_rowing: Гребля на каноэ
   genders:
     all:  Муж/Жен
     male: Муж
     female: Жен
-  national_team: Национальная Команда
+  national_team: Национальная команда

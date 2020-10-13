@@ -2,13 +2,13 @@ module Refinery
   module Coaches
     class CoachesController < ::ApplicationController
 
-      before_action :find_all_coaches
+      # before_action :find_all_coaches
       before_action :find_page
 
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @coach in the line below:
-        @coaches = Refinery::Coaches::Coach.with_filter(params).page(params[:page]).per_page(9)
+        @coaches = Refinery::Coaches::Coach.includes(:icon).order(:position).with_filter(params).page(params[:page]).per_page(9)
         present(@page)
       end
 

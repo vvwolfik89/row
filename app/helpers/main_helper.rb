@@ -1,10 +1,10 @@
 module MainHelper
   def build_employees_collection
-    Refinery::Employees::Employee.order("RAND()").limit(4)
+    Refinery::Employees::Employee.includes(:icon).order("RAND()").limit(4)
   end
 
   def build_news_collection
-    Refinery::Items::Item.order('created_at DESC').take(3)
+    Refinery::Items::Item.includes(:icon).order('created_at DESC').take(3)
   end
 
   def count_employees
@@ -21,6 +21,6 @@ module MainHelper
   end
 
   def parthers_collection
-    Refinery::Partners::Partner.order(:position).active
+    Refinery::Partners::Partner.includes(:icon).order(:position).active
   end
 end

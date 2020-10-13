@@ -8,7 +8,7 @@ module Refinery
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @service in the line below:
-        @services = Refinery::Services::Service.with_filter(params).page(params[:page]).per_page(5)
+        @services = Refinery::Services::Service.includes(:icon).with_filter(params).page(params[:page]).per_page(5)
         present(@page)
       end
 
