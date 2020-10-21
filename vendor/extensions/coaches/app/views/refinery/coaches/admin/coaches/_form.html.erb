@@ -18,7 +18,7 @@
   </div>
   <%= f.input :rowing_type, collection: build_enum_collection(Refinery::Coaches::Coach.rowing_types, 'rowing_types'), include_blank: false -%>
   <%= f.input :type_of_staff, collection: build_enum_collection(Refinery::Coaches::Coach.type_of_staffs, 'type_of_staffs'), include_blank: false -%>
-  <%= f.input :position -%>
+  <%= f.input :pre_position -%>
 
 
   <div class='field'>

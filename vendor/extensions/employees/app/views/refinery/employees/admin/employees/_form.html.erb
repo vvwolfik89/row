@@ -18,7 +18,7 @@
   <%= f.input :type_education, collection: Refinery::Employees::Employee.type_educations.map {|key, _| [t("type_educations.#{key}"), key]} %>
   <%= f.input :education %>
   <%= f.input :phone %>
-  <%= f.input :position %>
+  <%= f.input :pre_position %>
   <%= f.association :refinery_departments, collection: Refinery::Departments::Department.active.map {|key, _| [key.title, key.id]}, label: 'Department', include_blank: true %>
 
   <div class='field'>

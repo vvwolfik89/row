@@ -27,11 +27,11 @@ ru:
         first_name: Имя
         last_name: Фамилия
         patronymic: Отчество
-        bday: День Рождения
+        bday: День рождения
         rowing_type: Тип Гребли
         icon: Фото
         description: Описание
-        position: Должность
+        pre_position: Должность
         type_of_staff: Тип
         national_coach: Входит в тренерский состав национальных команд
   rowing_types:

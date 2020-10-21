@@ -8,7 +8,7 @@ module Refinery
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @competition in the line below:
-        @competitions = Competition.with_filter(params).page(params[:page]).per_page(5)
+        @competitions = Competition.includes(:image).with_filter(params).page(params[:page]).per_page(5)
         present(@page)
       end
 

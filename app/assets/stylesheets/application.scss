@@ -203,3 +203,30 @@ body {
   flex: 0 0 33.333%;
   max-width: 33.333%;
 }
+
+.collection_albums {
+  webkit-column-width: 100px;
+  -moz-column-width: 100px;
+  column-width: 100px;
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  //-webkit-column-rule: 1px solid #ccc;
+  //-moz-column-rule: 1px solid #ccc;
+  //column-rule: 1px solid #ccc;
+}
+
+.collection_albums p a {
+  //margin-left: 30px;
+  font-size: 20px;
+  width: 60%;
+  word-wrap: break-word;
+}
+
+.collection_albums p img {
+  width: 90%;
+  height: auto;
+}

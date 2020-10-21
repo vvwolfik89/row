@@ -31,9 +31,9 @@ ru:
         type_education: Образование
         education: Школа/Среднее специальное заведение/ Университет
         phone: Телефон
-        bdate: День Рождения
+        bdate: День рождения
         description: Описание
-        position: Должность
+        pre_position: Должность
         beginning_work_at: Работает в организации с
         icon: Фото
         is_active: Is Active

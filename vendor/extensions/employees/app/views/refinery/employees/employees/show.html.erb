@@ -1,20 +1,21 @@
 <!--Общий контейнер, в который мы обертываем все остальные-->
 <div class="wrap">
-  <div style="width: 100%">
-    <div style="width: 40%; float: left">
-      <%= image_fu @employee.icon, nil, class: "card-img rounded-0", style: "height: auto; width: 90%" %>
+  <div style="width: 100%; height: 80%">
+    <div style="width: 25%; float: left">
+      <%= image_fu @employee.icon, nil, class: "card-img rounded-0", style: "height: 100%;" %>
     </div>
-    <div style="width: 60%; float: right">
+    <div style="width: 70%; float: right">
       <span class="company_description">
     <p>
       <%= raw @employee.full_name %>
     </p>
     <p style="font-size: 15px">
-      <%= raw @employee.position %>
+      <%= raw @employee.pre_position %>
     </p>
     <p style="font-size: 15px">
       <%= raw @employee.refinery_departments.last.title if @employee.refinery_departments.last.present? %>
     </p>
+        <%= raw @employee.description.html_safe %>
   </span>
     </div>
   </div>
@@ -25,7 +26,7 @@
     Блок, который располагается под блоком с логотипом и описанием
     В нем мы будем писать информацию о компании :D
   -->
-  <div class="main_info">
+  <div class="main_info" style="height: 15%">
 				<span class="site" style="font-size: 14px">
 				 <%= t('employees.beginning_work_at') %> <%= raw @employee.beginning_work_at.strftime('%m/%d/%Y') %>
 				</span>

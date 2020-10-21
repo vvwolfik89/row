@@ -8,7 +8,7 @@ module Refinery
       enum type_of_staff: %i(coach doctor masseur)
 
 
-      translates :first_name, :last_name, :patronymic, :description, :position
+      translates :first_name, :last_name, :patronymic, :description, :pre_position
 
       validates :first_name, :last_name, :patronymic, :presence => true
 

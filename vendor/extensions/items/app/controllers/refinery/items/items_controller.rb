@@ -8,7 +8,7 @@ module Refinery
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @item in the line below:
-        @items = Item.order('created_at DESC').with_filter(params).page(params[:page]).per_page(5)
+        @items = Item.includes(:icon).order('created_at DESC').with_filter(params).page(params[:page]).per_page(5)
         present(@page)
       end
 
