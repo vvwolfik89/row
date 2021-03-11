@@ -1,0 +1,92 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+be:
+  hello: "Hello world"
+  banner: "РЭСПУБЛІКАНСКІ ЦЭНТР АЛІМПІЙСКАЙ ПАДРЫХТОЎКІ ПА ВЯСЛЯРНЫМ ВІДАХ СПОРТУ"
+  activerecord:
+    attributes:
+      result:
+        title: название
+        last_name: Last Name
+        patronymic: Patronymic
+        bday: Bday
+        type_rowing: Type Rowing
+        territorial_unit: Territorial Unit
+        educational_institution: Educational Institution
+        organisation: Organisation
+        first_organisation: First Organisation
+  employee_types:
+    head: Дырэктар
+    deputy_head: Намеснік дырэктара
+    management_staff: Кіраўнічы персанал
+    head_of_department: Начальнік аддзела
+    employee: Супрацоўнік
+  employees:
+    title: Пазнаёмцеся з нашымі работнікамі
+    description:
+    count: Работнікаў РЦАП па вяслярных відах спорту г. Заслаўе
+    beginning_work_at: На пасадзе з
+  photo_gallery:
+    націсніце: Націсніце на малюнак
+  news:
+    read_all_news: Чытаць усе навіны
+    type_news: Навіны
+    news: Навіны
+    view: Больш падрабязна
+  athletes:
+    academic_rowing: Спартсменаў нацыянальнай каманды па веславанні акадэмічнай
+    kayaking: Спартсменаў нацыянальнай каманды па веславанні на байдарках
+    canoeing: Спартсменаў нацыянальнай каманды па веславанні на каноэ
+    kayaking_and_canoeing: Спартсменаў нацыянальнай каманды па веславанні на байдарках і каноэ
+  coaches:
+    coaching_staff: Трэнерскі склад нацыянальных каманд
+  our_partners: Нашы партнёры
+  navigation_links: Рух па сайце
+  address_data:
+    name: РЦАП па вяслярным відах спорту
+    address: Мінскі раён, Заслаўе, вул. Ганалес, д. 1
+    post_index: 223036
+    e_mail: rcop_grebn_v@tut.by
+    phone_number: (017) 517 82 58
+    map: РЦАП на карце
+  phone_number: Тэлефон
+  search: Знайсці
+  all_employees: Выбраць
+  all_departments: Выбраць аддзел
+  view_more: Глядзець
+  search_posts: Шукаць навіну
+  coast: руб.
+  type_sport: Від спорту
+  bday: Дзень нараджэння
+  teritorial_unit: Выступае за
+  national_staff: Метадычны персанал нацыянальных каманд
+  type_of_staff: Пасада

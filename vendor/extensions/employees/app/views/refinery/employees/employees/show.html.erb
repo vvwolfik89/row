@@ -1,4 +1,5 @@
 <!--Общий контейнер, в который мы обертываем все остальные-->
+<% if @employee.present? %>
 <div class="wrap">
   <div style="width: 100%; height: 80%">
     <div style="width: 25%; float: left">
@@ -15,7 +16,7 @@
     <p style="font-size: 15px">
       <%= raw @employee.refinery_departments.last.title if @employee.refinery_departments.last.present? %>
     </p>
-        <%= raw @employee.description.html_safe %>
+        <%= raw @employee.description.html_safe if @employee.description.present? %>
   </span>
     </div>
   </div>
@@ -39,5 +40,7 @@
     </span>
   </div>
 </div>
+
+<% end %>
 
 <%= render '/refinery/content_page' %>

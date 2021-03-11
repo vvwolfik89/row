@@ -11,6 +11,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules', 'lib')
 Rails.application.config.assets.precompile += [
   "wymeditor/lang/ru.js",
   "wymeditor/lang/en.js",
+  "wymeditor/lang/be.js",
   "custom.scss",
   "custom.js",
   "cocoon_limit_relation.js",

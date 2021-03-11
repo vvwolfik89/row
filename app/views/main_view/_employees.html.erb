@@ -14,7 +14,7 @@
               <h3>
                 <a href="<%= employees_employee_path(employee.id) %>"><%= employee.last_name %> <%= employee.first_name %></a>
               </h3>
-              <p><%= employee.position %></p>
+              <p><%= t("employee_types.#{employee.employee_type}") %></p>
               <!--            <ul class="card-team__social">-->
               <!--              <li><a href="#"><i class="ti-facebook"></i></a></li>-->
               <!--              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>-->
