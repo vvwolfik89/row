@@ -44,6 +44,12 @@ be:
         educational_institution: Educational Institution
         organisation: Organisation
         first_organisation: First Organisation
+      data_email:
+        name: Прозвішча, уласнае імя, імя па бацьку (калі маецца) альбо ініцыялы кіраўніка або асобы, упаўнаважанага ва ўстаноўленым парадку падпісваць звароты
+        address: Месца знаходжання юрыдычнай асобы
+        email: E-Mail
+        text: Тэкст звароту (да 2000 сімвалаў)
+        unp: Поўнае найменне юрыдычнай асобы
   employee_types:
     head: Дырэктар
     deputy_head: Намеснік дырэктара
@@ -90,3 +96,14 @@ be:
   teritorial_unit: Выступае за
   national_staff: Метадычны персанал нацыянальных каманд
   type_of_staff: Пасада
+  data_email:
+    head: Электронныя звароты
+    success: Электронны зварот быў адпраўлены
+    type_of_email:
+      individual_email: Фізічным асобам
+      entity_email: Юрыдычным асобам
+    entity_name: Прозвішча, уласнае імя, імя па бацьку (калі маецца) альбо ініцыялы кіраўніка або асобы, упаўнаважанага ва ўстаноўленым парадку падпісваць звароты
+    entity_address: Месца знаходжання юрыдычнай асобы
+    individual_name: Прозвішча, уласнае імя, імя па бацьку (калі маецца) або ініцыялы грамадзяніна
+    individual_address: Адрас месца жыхарства (месца знаходжання)
+    send: Адправіць

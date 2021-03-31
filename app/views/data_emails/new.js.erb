@@ -1,0 +1,7 @@
+$('#email-note-modal').remove()
+<% if params[:type_of_email].present? %>
+$('#email_modal').append("<%= j render('entity_modal_form') %>")
+<% else %>
+$('#email_modal').append("<%= j render('individual_modal_form') %>")
+<% end %>
+//$('#email-note-modal').modal()

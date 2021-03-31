@@ -13,10 +13,11 @@
 //@import "bootstrap";
 @import "theme_style.css.scss";
 @import "gallery.css.scss";
+@import "data_emails.css.scss";
 @import "employee_style.css.scss";
 @import "preview.css.scss";
 @import "athlete.css.scss";
-@import "bootstrap/bootstrap.min";
+//@import "bootstrap/bootstrap.min";
 @import "fontawesome/css/all.min.css";
 @import "themify-icons/themify-icons.css";
 @import "linericon/style.css";
@@ -42,6 +43,9 @@ body {
   padding: 20px;
 }
 
+a {
+  text-decoration: none !important;
+}
 //
 //#menu ul {
 //  list-style: none;
