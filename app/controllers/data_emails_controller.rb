@@ -10,6 +10,8 @@ class DataEmailsController < ApplicationController
     @data_email = DataEmail.new(resource_params)
     respond_to do |format|
       if @data_email.save
+
+        UserMailer.with(data_email: @data_email).welcome_email.deliver
         # format.html { redirect_to @data_email, notice: 'Help desk link was successfully created.' }
         format.json {render json: @data_email, status: :created, location: @data_email}
         format.js {render 'data_emails/success'}
