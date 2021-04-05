@@ -1,0 +1,22 @@
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div id="email_modal_content" class="modal-content email_modal_content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"><%= t('data_email.head') %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal_email_class">
+          <%= link_to(main_app.new_data_email_path(format: :js), data: {toggle: "tooltip", remote: true}, title: 'Email', class: "button fire") do %>
+            <span class="align-middle"><%= t('data_email.type_of_email.individual_email') %></span>
+          <% end %>
+          <%= link_to(main_app.new_data_email_path(format: :js, type_of_email: '1'), data: {toggle: "tooltip", remote: true}, title: 'Email', class: "button ice") do %>
+            <span class="align-middle"><%= t('data_email.type_of_email.entity_email') %></span>
+          <% end %>
+          <div id="email_modal" class="email_form"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

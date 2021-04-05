@@ -32,6 +32,14 @@
 en:
   hello: "Hello world"
   banner: 'Establishment of "National Center of Olympic training for rowing"'
+  activerecord:
+    attributes:
+      data_email:
+        name: Last name, proper name, patronymic (if any) or initials of the manager or the person authorized to sign appeals in accordance with the established procedure
+        address: Location of the legal entity
+        email: E-Mail
+        text: Message text (up to 2000 characters)
+        unp: Full name of the legal entity
   employee_types:
     head: Head
     deputy_head: Deputy Head
@@ -76,3 +84,14 @@ en:
   bday: Birthday
   territorial_unit: Territorial Unit
   national_staff: National Staff
+  data_email:
+    head: Electronic appeals
+    success: An email message was sent
+    type_of_email:
+      individual_email: For individuals
+      entity_email: For legal entities
+    entity_name: Last name, proper name, patronymic (if any) , or initials of the manager or person authorized to sign appeals in accordance with the established procedure
+    entity_address: Location of the legal entity
+    individual_name: Surname, proper name, patronymic (if available) or initials of the citizen
+    individual_address: Address of the place of residence (place of residence)
+    send: Send

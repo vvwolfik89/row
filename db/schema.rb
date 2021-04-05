@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201008132349) do
+ActiveRecord::Schema.define(version: 20210319165559) do
 
   create_table "athletes_current_coach", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.bigint "refinery_coach_id", null: false
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20201008132349) do
     t.bigint "refinery_athlete_id", null: false
     t.index ["refinery_athlete_id"], name: "index_athletes_first_coach_on_refinery_athlete_id"
     t.index ["refinery_coach_id"], name: "index_athletes_first_coach_on_refinery_coach_id"
+  end
+
+  create_table "data_emails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "email"
+    t.text "text"
+    t.string "address"
+    t.integer "type_of_email"
+    t.string "unp"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_album_pages", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

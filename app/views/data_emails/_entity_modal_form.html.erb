@@ -1,0 +1,12 @@
+<div id="email-note-modal">
+  <%= simple_form_for(@data_email, remote: true, :html => {:class => 'form-vertical '}) do |f| %>
+    <div id="email_data_errors" class="email_data_errors"></div>
+    <%= f.input :name, label: I18n.t('data_email.entity_name') %>
+    <%= f.input :type_of_email, as: :hidden, input_html: {value: 'entity'} %>
+    <%= f.input :address, label: I18n.t('data_email.entity_address') %>
+    <%= f.input :unp %>
+    <%= f.input :email %>
+    <%= f.input :text %>
+    <%= f.button :submit, I18n.t('data_email.send'), class: "btn-primary" %>
+  <% end %>
+</div>

@@ -13,6 +13,7 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery.dropotron.min
+//= require jquery_ujs
 //= require skel.min
 //= require util
 //= require popper
